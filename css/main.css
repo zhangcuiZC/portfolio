@@ -1,0 +1,101 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	overflow: hidden;
+	background: #ccc;
+}
+.col{
+	position: absolute;
+	min-height: 100vh;
+	width: 14.28%;
+	cursor: pointer;
+	overflow: hidden;
+	transition: all 0.6s;
+	z-index: 1;
+}
+.col h3{
+	color: #fff;
+	text-align: center;
+	margin-top: 40vh;
+}
+.col1{
+	left: 0;
+	background-color: #244F75;
+}
+.col2{
+	left: 14.28%;
+	background-color: #10893e;
+}
+.col3{
+	left: 28.56%;
+	background-color: #60BFBF;
+}
+.col4{
+	left: 42.84%;
+	background-color: #8C4B7E;
+}
+.col5{
+	left: 57.12%;
+	background-color: #F8BB44;
+}
+.col6{
+	left: 71.4%;
+	background-color: #F24B4B;
+}
+.col7{
+	left: 85.68%;
+	background-color: #ff7777;
+}
+.col:before{
+	position: absolute;
+	content: "";
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(255,255,255,0.05);
+	transform: skew(-30.5deg);
+	transition: all 0.4s;
+}
+.col:hover:before{
+	position: absolute;
+	content: "";
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(255,255,255,0.05);
+	transform-origin: center center;
+	transform: scale(3) skew(-30.5deg);
+	transition: all 0.4s;
+}
+.col.active{
+	z-index: 2;
+	left: 0;
+	right: 0;
+	width: 100vw;
+	z-index: 2;
+	transition: all 0.6s;
+}
+.col.inactive{
+	z-index: 1;
+	transform: scale(0) rotateZ(180deg);
+	transition: all 0.6s;
+}
+.close{
+	position: fixed;
+	right: 30px;
+	top: 30px;
+	width: 120px;
+	height: 40px;
+	font-size: 14px;
+	color: #fff;
+	line-height: 40px;
+	text-align: center;
+	background-color: rgba(0,0,0,0.3);
+	cursor: pointer;
+	z-index: 999;
+	display: none;
+}
