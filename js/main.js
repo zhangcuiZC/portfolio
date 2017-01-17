@@ -1,31 +1,39 @@
 $(function(){
 	var $col=$(".col"),
 		$close=$(".close"),
+		$gotogithub=$(".gotogithub"),
 		$detail=$(".detail"),
 		title="",
 		self=null,
 		iframe=null,
 		imgs=null,
-		src="",
+		idx,
 		flag=true,
 		srcarr=[
 			"https://zhangcuizc.github.io/",
 			"https://zhangcuizc.github.io/jd-new"
+			],
+		hrefarr=[
+			"https://github.com/zhangcuiZC/zhangcuiZC.github.io",
+			"https://github.com/zhangcuiZC/jd-new"
 			];
 
+	$col.each(function(index, el) {
+		$(this).animate({top:"0"}, 100+index*100);
+	});
 	$col.click(function(event) {
 		if(flag){
 			self=$(this);
 			self.addClass('active').siblings('.col').addClass('inactive');
 			$close.fadeIn();
 			self.find('.col-content').css('top', '0').fadeIn(400, function() {
-				imgs=self.find('img');
-				imgs.each(function(index, el) {
-					$(el).attr('src', $(el).attr('data-src'));
-				});
+				// imgs=self.find('img');
+				// imgs.each(function(index, el) {
+				// 	$(el).attr('src', $(el).attr('data-src'));
+				// });
 			});
 			title=self.find('h1').text();
-			self.find('.col-title').text(title+"加载中");
+			self.find('.col-title').text(title+"加载中...");
 			flag=false;
 		}
 	});
@@ -35,6 +43,7 @@ $(function(){
 			event.stopPropagation();
 			self.removeClass('active').siblings('.col').removeClass('inactive');
 			$close.fadeOut();
+			$gotogithub.fadeOut();
 			self.find('.col-content').fadeOut().siblings('iframe').hide();
 			self.find('.col-title').text(title);
 			flag=true;
@@ -43,11 +52,15 @@ $(function(){
 
 	$detail.click(function(event) {
 		event.stopPropagation();
-		if(!$(this).parent(".col-content").siblings('iframe').length){
-			src=srcarr[$(this).parents(".col").attr('class').match(/\d/g)-1];
-			iframe=$('<iframe frameborder="0" src="'+src+'"></iframe>');
-			$(this).parents(".col").append(iframe);
-		}
-		$(this).parent(".col-content").animate({top:"-100vh"}, 400).siblings('iframe').animate({top:"0"}, 400).fadeIn();
+		$gotogithub.fadeIn();
+		$(this).parent(".col-content").animate({top:"-100vh"}, 400 ,function(){
+			if(!$(this).siblings('iframe').length){
+				idx=$(this).parents(".col").attr('class').match(/\d/g)-1;
+				$gotogithub.attr('href', hrefarr[idx]);
+				iframe=$('<iframe frameborder="0" src="'+srcarr[idx]+'"></iframe>');
+				$(this).parents(".col").append(iframe);
+			}
+			$(this).siblings('iframe').animate({top:"0"}, 400).fadeIn();
+		});
 	});
 });

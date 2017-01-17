@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	font-family: "microsoft yahei";
+	text-decoration: none;
 }
 body{
 	overflow: hidden;
@@ -20,39 +21,40 @@ body{
 	color: #fff;
 	text-align: center;
 	margin-top: 40vh;
+	text-shadow: 1px 1px 1px #333;
 }
 .col1,.col1 .col-content{
-	top: 0;
+	top: -120vh;
 	left: 0;
 	background-color: #244F75;
 }
 .col2,.col2 .col-content{
-	top: 0;
+	top: -120vh;
 	left: 14.28%;
 	background-color: #10893e;
 }
 .col3,.col3 .col-content{
-	top: 0;
+	top: -120vh;
 	left: 28.56%;
 	background-color: #60BFBF;
 }
 .col4,.col4 .col-content{
-	top: 0;
+	top: -120vh;
 	left: 42.84%;
 	background-color: #8C4B7E;
 }
 .col5,.col5 .col-content{
-	top: 0;
+	top: -120vh;
 	left: 57.12%;
 	background-color: #F8BB44;
 }
 .col6,.col6 .col-content{
-	top: 0;
+	top: -120vh;
 	left: 71.4%;
 	background-color: #f77;
 }
 .col7,.col7 .col-content{
-	top: 0;
+	top: -120vh;
 	left: 85.68%;
 	background-color: #F24B4B;
 }
@@ -100,11 +102,12 @@ body{
 	transform: scale(0) rotateZ(90deg);
 	transition: all 0.6s;
 }
-.close{
+.close,.gotogithub{
 	position: fixed;
+	display: block;
 	right: 30px;
 	top: 15px;
-	width: 150px;
+	width: 40px;
 	height: 40px;
 	font-size: 14px;
 	color: #fff;
@@ -115,6 +118,9 @@ body{
 	cursor: pointer;
 	z-index: 999;
 	display: none;
+}
+.gotogithub{
+	top: 65px;
 }
 .col-content{
 	position: absolute;
@@ -146,7 +152,6 @@ body{
 .col-content p{
 	font-size: 12px;
 	line-height: 2em;
-	/*text-indent: 1em;*/
 }
 .col-content h1{
 	margin-top: 5%;
@@ -182,14 +187,13 @@ body{
 	background-color: rgba(0,0,0,0.4);
 	cursor: pointer;
 	transition: all 0.4s;
+	left: 10%;
+	bottom: 5%;
+	text-shadow: 1px 1px 1px #333;
 }
 .detail:hover{
 	background-color: rgba(255,255,255,0.3);
 	transition: all 0.4s;
-}
-.col1-detail{
-	left: 10%;
-	bottom: 5%;
 }
 .col iframe{
 	position: absolute;
@@ -197,4 +201,13 @@ body{
 	width: 100vw;
 	height: 100vh;
 	display: none;
+}
+.copy{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	font-size: 12px;
+	color: #fff;
+	z-index: 999;
+	text-shadow: 1px 1px 1px #333;
 }
