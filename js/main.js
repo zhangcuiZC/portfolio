@@ -12,13 +12,13 @@ $(function(){
 		srcarr=[
 			"https://zhangcuizc.github.io/",
 			"https://zhangcuizc.github.io/jd-new",
-			"http://www.cnblogs.com/zczhangcui/",
+			"https://www.cnblogs.com/zczhangcui/",
 			"project-slideshow/index.html"
 			],
 		hrefarr=[
 			"https://github.com/zhangcuiZC/zhangcuiZC.github.io",
 			"https://github.com/zhangcuiZC/jd-new",
-			"http://www.cnblogs.com/zczhangcui/"
+			"https://www.cnblogs.com/zczhangcui/"
 			];
 
 	$col.each(function(index, el) {
