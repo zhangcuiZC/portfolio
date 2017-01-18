@@ -36,7 +36,7 @@ $(function(){
 				// });
 			});
 			title=self.find('h1').text();
-			self.find('.col-title').text(title+"连接中...");
+			self.find('.col-title').text('连接到"'+title+'"...');
 			flag=false;
 		}
 	});
@@ -63,7 +63,10 @@ $(function(){
 				iframe=$('<iframe frameborder="0" src="'+srcarr[idx]+'"></iframe>');
 				$(this).parents(".col").append(iframe);
 			}
-			$(this).siblings('iframe').animate({top:"0"}, 400).fadeIn();
+			iframe=$(this).siblings('iframe');
+			jQuery(iframe.contentDocument).ready(function($) {
+				iframe.animate({top:"0"}, 400).fadeIn();
+			});
 		});
 	});
 });
