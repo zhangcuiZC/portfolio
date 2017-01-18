@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>slideshow</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			font-family: "microsoft yahei";
+		}
+		body{
+			color: #fff;
+			background: #8C4B7E;
+			padding: 3% 10%;
+		}
+		.box1{
+			width: 600px;
+			height: 338px;
+			overflow: hidden;
+			user-select: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+		}
+		.box2{
+			width: 800px;
+			height: 450px;
+			overflow: hidden;
+			user-select: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+		}
+		h3:nth-last-of-type(1){
+			margin-top: 100px;
+		}
+	</style>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="jquery.slideshow.js"></script>
+	<script type="text/javascript" src="jquery.slideshowfadein.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".box1").slideShow();
+			$(".box2").slideShowFadein({color:"#bc4728",time:4000});
+		});
+	</script>
+</head>
+<body>
+	<h3>一、无差别滚动轮播</h3>
+	<div class="box1">
+		<div>
+			<a href="#"><img src="img/img1.jpg" alt="自然秋天风景桌面壁纸"></a>
+			<a href="#"><img src="img/img2.jpg" alt="奥地利哈尔施塔特夜晚"></a>
+			<a href="#"><img src="img/img3.jpg" alt="海洋岛屿 棕榈树"></a>
+			<a href="#"><img src="img/img4.jpg" alt="早晨山谷阳光风景壁纸"></a>
+			<a href="#"><img src="img/img5.jpg" alt="斯洛文尼亚 布莱德湖"></a>
+		</div>
+	</div>
+	<h3>二、淡入淡出式轮播</h3>
+	<div class="box2">
+		<a href="#"><img src="img/img21.jpg" alt="Dota2"></a>
+		<a href="#"><img src="img/img22.jpg" alt="Drow Ranger"></a>
+		<a href="#"><img src="img/img23.jpg" alt="Nature's Prophet"></a>
+		<a href="#"><img src="img/img24.jpg" alt="Tidehunter"></a>
+		<a href="#"><img src="img/img25.jpg" alt="Crystal Maiden"></a>
+		<a href="#"><img src="img/img26.jpg" alt="Dota2"></a>
+	</div>
+</body>
+</html>

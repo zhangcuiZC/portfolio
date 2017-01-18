@@ -11,11 +11,14 @@ $(function(){
 		flag=true,
 		srcarr=[
 			"https://zhangcuizc.github.io/",
-			"https://zhangcuizc.github.io/jd-new"
+			"https://zhangcuizc.github.io/jd-new",
+			"http://www.cnblogs.com/zczhangcui/",
+			"project-slideshow/index.html"
 			],
 		hrefarr=[
 			"https://github.com/zhangcuiZC/zhangcuiZC.github.io",
-			"https://github.com/zhangcuiZC/jd-new"
+			"https://github.com/zhangcuiZC/jd-new",
+			"http://www.cnblogs.com/zczhangcui/"
 			];
 
 	$col.each(function(index, el) {
@@ -33,7 +36,7 @@ $(function(){
 				// });
 			});
 			title=self.find('h1').text();
-			self.find('.col-title').text(title+"加载中...");
+			self.find('.col-title').text(title+"连接中...");
 			flag=false;
 		}
 	});
