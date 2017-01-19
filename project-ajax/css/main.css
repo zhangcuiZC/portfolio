@@ -1,0 +1,415 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "microsoft yahei";
+}
+body{
+	color: #fff;
+	background: #F8BB44;
+	padding: 3% 10%;
+}
+body>h3{
+	margin-top: 5%;
+	text-shadow: 1px 1px 0 #333;
+	text-align: center;
+}
+.randomquote,.weather,.wikisearch,.twitchdota2{
+	position: relative;
+	color: #333;
+	width: 100%;
+	padding: 3% 0;
+	border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+/*------------------------------*/
+.randomquote a{
+	text-decoration: none;
+	color: #fff;
+}
+.randomquote .quotebox{
+	margin: 0 auto;
+	width: 500px;
+	background-color: #fff;
+	border-radius: 3px;
+}
+.randomquote .quotecontent{
+	width: 450px;
+	position: relative;
+	float: left;
+	margin: 40px 25px 0 25px;
+	min-height: 100px;
+	text-align: center;
+	color: #c55;
+}
+.randomquote .quotecontent i{
+	font-size: 1.8em;
+}
+.randomquote .quoteauthor{
+	width: 450px;
+	height: 40px;
+	float: left;
+	margin: 5px 25px;
+}
+.randomquote button{
+	border-radius: 2px;
+	border: none;
+	height: 40px;
+	background-color: #c55;
+	color: #fff;
+}
+.randomquote button:hover{
+	opacity: 0.8;
+	cursor: pointer;
+}
+.randomquote #tweet,.randomquote #tum{
+	width: 40px;
+	float: left;
+	margin-right: 10px;
+	font-size: 1.3em;
+}
+.randomquote #newquote{
+	width: 120px;
+	float: right;
+	font-size: 1.1em;
+}
+.randomquote .buttons{
+	margin: 5px 25px 0 25px;
+	
+}
+.randomquote .boxbottom{
+	height: 20px;
+	clear: both;
+}
+.randomquote #content{
+	color: #c55;
+	font-size: 1.5em;
+}
+.randomquote #author{
+	float: right;
+	color: #999;
+	font-style: italic;
+}
+/*-----------------------*/
+.weather .weather-box{
+	color: #333;
+	padding: 20px;
+	width: 500px;
+	height: 300px;
+	margin: 0 auto;
+	border: 1px solid #f77;
+	background: linear-gradient(to bottom,#ff7,#f77);
+}
+.weather .today{
+	line-height: 20px;
+	position: relative;
+}
+.weather .choosecity{
+	position: absolute;
+	top: 0;
+	right: 50px;
+}
+.weather .choosecity .city{
+	width: 5em;
+	background-color: transparent;
+	outline: none;
+	border: 1px solid #f77;
+}
+.weather .update{
+	display: inline-block;
+	float: right;
+	outline: 1px solid #f77;
+	padding: 0 10px;
+	font-size: 12px;
+	cursor: pointer;
+}
+.weather .todayinfo{
+	float: left;
+	margin-top: 10px;
+	width: 250px;
+	height: 150px;
+	text-align: center;
+	background-color: rgba(255,255,255,0.3);
+}
+.weather .todayotherinfo{
+	float: right;
+	margin: 10px 0 0 0;
+	width: 220px;
+	height: 146px;
+	padding: 2px 10px;
+	background-color: rgba(255,255,255,0.3);
+	overflow: hidden;
+}
+.weather .future{
+	float: left;
+	margin-top: 10px;
+	height: 100px;
+	padding: 5px 0;
+	width: 500px;
+	background-color: rgba(255,255,255,0.3);
+}
+.weather .todayinfo h1,.weather .todayinfo p{
+	margin-top: 8px;
+}
+.weather .todayotherinfo h4{
+	margin: 12px 0 5px;
+}
+.weather .todayotherinfo p{
+	margin-top: 5px;
+	text-align: left;
+	font-size: 12px;
+}
+.weather .future ul li{
+	float: left;
+	width: 124px;
+	border-right: 1px solid #eee;
+	list-style: none;
+	height: 100px;
+	text-align: center;
+}
+.weather .future-item4{
+	border: none !important;
+}
+.weather .future ul li p{
+	font-size: 12px;
+	margin-top: 3px;
+}
+.weather .future ul li h3{
+	margin: 10px 0;
+}
+/*--------------------------*/
+.wikisearch{
+	overflow: auto;
+	height: 80vh;
+}
+.wikisearch .logo img{
+	position: absolute;
+  	width:135px;
+  	height:155px;
+	left: 0;
+	right: 0;
+	top: 100px;
+	margin: auto auto;
+}
+.wikisearch .searchbox{
+	width: 80%;
+	margin-top: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+.wikisearch .clearfix{
+	clear: both;
+}
+.wikisearch .searchbar{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #f77;
+}
+.wikisearch .inputbox{
+	float: left;
+	width: 78%;
+	height: 40px;
+	padding: 0 1%;
+	border: none;
+}
+.wikisearch .searchbtn{
+	width: 20%;
+	height: 40px;
+	background-color: #f77;
+	border: none;
+	font-size: 1.5em;
+	color: #fff;
+	cursor: pointer;
+}
+.wikisearch .inputbox:focus{
+	background-color: #eee;
+}
+.wikisearch .searchresult{
+	width: 98%;
+	padding: 1%;
+	border: 1px solid #f77;
+	margin-top: 5px;
+	font-size: 12px;
+	display: none;
+}
+.wikisearch .searchresult img{
+	float: left;
+	margin-right: 5px;
+}
+.wikisearch .searchresult a:link{
+	color: #f77;
+}
+.wikisearch .searchresult a:hover{
+	color: #f47;
+}
+.wikisearch .searchresult li{
+	border-bottom: 1px dotted #ddd;
+	padding-bottom: 10px;
+	padding-top: 5px;
+	list-style-position: inside;
+}
+.wikisearch .searchresult li:nth-last-child(1){
+	border: none;
+}
+.wikisearch .searchresult h3{
+	padding-bottom: 2px;
+	display: inline-block;
+}
+.wikisearch .searchresult p{
+	padding-left: 1.1em;
+}
+/*-----------------------------*/
+.twitchdota2{
+	overflow: auto;
+	height: 80vh;
+}
+.twitchdota2 a{
+	color: #000;
+	text-decoration: none;
+}
+.twitchdota2 .clearfix{
+	clear: both;
+}
+.twitchdota2 .topbar{
+	position: relative;
+	width: 80%;
+	min-width: 900px;
+	height: 50px;
+	background-color: #f77;
+	color: #fff;
+	line-height: 50px;
+	font-size: 24px;
+	margin: 15% auto 0;
+	border: 1px solid #f77;
+}
+.twitchdota2 .topbar .title{
+	float: left;
+	margin-left: 1%;
+}
+.twitchdota2 .topbar .btn{
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: purple;
+	padding-right: 5%;
+	padding-left: 5%;
+	cursor: pointer;
+}
+.twitchdota2 .content{
+	width: 79%;
+	padding-right: 1%;
+	min-width: 890px;
+	margin: 5px auto 5px;
+	border: 1px solid #f77;
+	background-color: #eee;
+	display: none;
+}
+.twitchdota2 .content .item{
+	position: relative;
+	float: left;
+	width: 24%;
+	margin-left: 1%;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	height: auto;
+	background-color: #ccc;
+	font-size: 12px;
+	overflow: hidden;
+	transition: all 0.4s;
+	text-align: center;
+}
+.twitchdota2 .content .item:hover{
+	box-shadow: 3px 3px 3px 0px #aaa;
+	transition: all 0.4s;
+	background-color: #fff;
+}
+.twitchdota2 .content .item img{
+	display: inline-block;
+	width: 100%;
+	height: auto;
+}
+.twitchdota2 .content .item .status{
+	display: block;
+	line-height: 1.1em;
+	height: 2.2em;
+	padding: 5px;
+	padding-bottom: 0;
+	font-weight: bold;
+	overflow: hidden;
+	text-align: left;
+}
+.twitchdota2 .content .item .name{
+	float: left;
+	width: 60%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	padding: 5px;
+	font-weight: bold;
+	text-align: left;
+}
+.twitchdota2 .content .item .num{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding: 5px;
+	font-size: 10px;
+}
+.twitchdota2 .content .layer{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.5);
+	overflow: hidden;
+	display: none;
+}
+.twitchdota2 .content .layer span{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 80px;
+	height: 80px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	transform: scale(1.5,1.5);
+	transition: transform 0.4s;
+}
+.twitchdota2 .content .layer span.hovered{
+	transform: scale(1,1);
+	transition: transform 0.4s;
+}
+.twitchdota2 .layer span i{
+	width: 24px;
+	height: 40px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 30px;
+	margin: auto;
+}
+.twitchdota2 .layer span i:after{
+	content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-left: 24px solid #fff;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+}
+.triangle{
+	z-index: -1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(255,255,255,0.05);
+	transform: skew(-30.5deg);
+}

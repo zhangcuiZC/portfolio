@@ -13,12 +13,15 @@ $(function(){
 			"https://zhangcuizc.github.io/",
 			"https://zhangcuizc.github.io/jd-new",
 			"https://www.cnblogs.com/zczhangcui/",
-			"project-slideshow/index.html"
+			"project-slideshow/index.html",
+			"project-ajax/index.html"
 			],
 		hrefarr=[
 			"https://github.com/zhangcuiZC/zhangcuiZC.github.io",
 			"https://github.com/zhangcuiZC/jd-new",
-			"https://www.cnblogs.com/zczhangcui/"
+			"https://www.cnblogs.com/zczhangcui/",
+			"https://github.com/zhangcuiZC/slideshowzc",
+			"https://github.com/zhangcuiZC/My-FreeCodeCamp"
 			];
 
 	$col.each(function(index, el) {

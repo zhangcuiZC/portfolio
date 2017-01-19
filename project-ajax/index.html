@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>slideshow</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script src="https://use.fontawesome.com/8ae039c8aa.js" async></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+	<h3>一、随机获取名人名言</h3>
+	<div class="randomquote">
+		<div class="quotebox">
+			<div class="quotecontent">
+				<i class="fa fa-quote-left"></i><span id="content"></span>
+			</div>
+			<div class="quoteauthor">
+				<span id="author"></span>
+			</div>
+			<div class="buttons">
+				<a title="post in tweet" href="#" id="tweeturl"><button type="button"  id="tweet"><i class="fa fa-twitter fa-fw"></i></button></a>
+				<a title="post in tum" href="#" id="tumurl"><button type="button"  id="tum"><i class="fa fa-tumblr fa-fw"></i></button></a>
+				<button type="button" id="newquote">New quote</button>
+			</div>
+			<div class="boxbottom"></div>
+		</div>
+	</div>
+	<h3>二、天气组件</h3>
+	<div class="weather">
+		<div class="weather-box">
+			<h5 class="today"><span class="thiscity">-</span>&nbsp;&nbsp;星期<span class="day"></span>&nbsp;&nbsp;<span class="year"></span>年<span class="month"></span>月<span class="date"></span>日
+			<span class="choosecity">选择城市：<input type="text" name="city" class="city" value="北京" maxlength="6"></span>
+			<span class="update">更新</span></h5>
+			<div class="todayinfo">
+				<h1 class="temprange">~</h1>
+				<p class="type">-</p>
+				<p class="wind">-</p>
+				<p>实时空气质量：<span class="aqi">-</span></p>
+			</div>
+			<div class="todayotherinfo">
+				<p class="time">更新中……</p>
+				<p>实时：<span class="nowtemp"></span>°C</p>
+				<h4>感冒指数：</h4>
+				<p class="coldinfo"></p>
+			</div>
+			<div class="future">
+				<ul>
+					<li class="future-item1">
+						<h6 class="date">-</h6>
+						<h3 class="temprange">~</h3>
+						<p class="type">-</p>
+						<p class="wind">-</p>
+					</li>
+					<li class="future-item2">
+						<h6 class="date">-</h6>
+						<h3 class="temprange">~</h3>
+						<p class="type">-</p>
+						<p class="wind">-</p>
+					</li>
+					<li class="future-item3">
+						<h6 class="date">-</h6>
+						<h3 class="temprange">~</h3>
+						<p class="type">-</p>
+						<p class="wind">-</p>
+					</li>
+					<li class="future-item4">
+						<h6 class="date">-</h6>
+						<h3 class="temprange">~</h3>
+						<p class="type">-</p>
+						<p class="wind">-</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<h3>三、维基百科查询</h3>
+	<div class="wikisearch">
+		<div class="logo">
+			<img src="img/enwiki.png" alt="wikilogo">
+		</div>
+		<div class="searchbox">
+			<div class="searchbar">
+				<input type="text" name="searchcontent" value="" placeholder="search content" class="inputbox">
+				<button class="searchbtn">Search</button>
+			</div>
+			<div class="searchresult">
+				<ol>
+					<li>
+						<h3><a href="" target="_blank">loading……</a></h3>
+						<p><img src=""></p>
+						<div class="clearfix"></div>
+					</li>
+					<li>
+						<h3><a href="" target="_blank">loading……</a></h3>
+						<p><img src=""></p>
+						<div class="clearfix"></div>
+					</li>
+					<li>
+						<h3><a href="" target="_blank">loading……</a></h3>
+						<p><img src=""></p>
+						<div class="clearfix"></div>
+					</li>
+					<li>
+						<h3><a href="" target="_blank">loading……</a></h3>
+						<p><img src=""></p>
+						<div class="clearfix"></div>
+					</li>
+					<li>
+						<h3><a href="" target="_blank">loading……</a></h3>
+						<p><img src=""></p>
+						<div class="clearfix"></div>
+					</li>
+					<li>
+						<h3><a href="" target="_blank">loading……</a></h3>
+						<p><img src=""></p>
+						<div class="clearfix"></div>
+					</li>
+					<li>
+						<h3><a href="" target="_blank">loading……</a></h3>
+						<p><img src=""></p>
+						<div class="clearfix"></div>
+					</li>
+					<li>
+						<h3><a href="" target="_blank">loading……</a></h3>
+						<p><img src=""></p>
+						<div class="clearfix"></div>
+					</li>
+					<li>
+						<h3><a href="" target="_blank">loading……</a></h3>
+						<p><img src=""></p>
+						<div class="clearfix"></div>
+					</li>
+					<li>
+						<h3><a href="" target="_blank">loading……</a></h3>
+						<p><img src=""></p>
+						<div class="clearfix"></div>
+					</li>
+				</ol>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<h3>四、Twitch直播Dota2频道主播查询</h3>
+	<div class="twitchdota2">
+		<div class="topbar">
+			<span class="title">Dota2 Live-Twitch</span><span class="btn">Search</span>
+		</div>
+		<div class="content">
+			<a class="item" href="" target="_blank">
+				<img src="" alt="loading...">
+				<span class="status"></span>
+				<span><span class="name">name</span><span class="num">Viewers：<span></span></span></span>
+				<div class="layer">
+					<span><i></i></span>
+				</div>
+			</a>
+			<a class="item" href="" target="_blank">
+				<img src="" alt="loading...">
+				<span class="status"></span>
+				<span><span class="name">name</span><span class="num">Viewers：<span></span></span></span>
+				<div class="layer">
+					<span><i></i></span>
+				</div>
+			</a>
+			<a class="item" href="" target="_blank">
+				<img src="" alt="loading...">
+				<span class="status"></span>
+				<span><span class="name">name</span><span class="num">Viewers：<span></span></span></span>
+				<div class="layer">
+					<span><i></i></span>
+				</div>
+			</a>
+			<a class="item" href="" target="_blank">
+				<img src="" alt="loading...">
+				<span class="status"></span>
+				<span><span class="name">name</span><span class="num">Viewers：<span></span></span></span>
+				<div class="layer">
+					<span><i></i></span>
+				</div>
+			</a>
+			<a class="item" href="" target="_blank">
+				<img src="" alt="loading...">
+				<span class="status"></span>
+				<span><span class="name">name</span><span class="num">Viewers：<span></span></span></span>
+				<div class="layer">
+					<span><i></i></span>
+				</div>
+			</a>
+			<a class="item" href="" target="_blank">
+				<img src="" alt="loading...">
+				<span class="status"></span>
+				<span><span class="name">name</span><span class="num">Viewers：<span></span></span></span>
+				<div class="layer">
+					<span><i></i></span>
+				</div>
+			</a>
+			<a class="item" href="" target="_blank">
+				<img src="" alt="loading...">
+				<span class="status"></span>
+				<span><span class="name">name</span><span class="num">Viewers：<span></span></span></span>
+				<div class="layer">
+					<span><i></i></span>
+				</div>
+			</a>
+			<a class="item" href="" target="_blank">
+				<img src="" alt="loading...">
+				<span class="status"></span>
+				<span><span class="name">name</span><span class="num">Viewers：<span></span></span></span>
+				<div class="layer">
+					<span><i></i></span>
+				</div>
+			</a>
+			<a class="item" href="" target="_blank">
+				<img src="" alt="loading...">
+				<span class="status"></span>
+				<span><span class="name">name</span><span class="num">Viewers：<span></span></span></span>
+				<div class="layer">
+					<span><i></i></span>
+				</div>
+			</a>
+			<a class="item" href="" target="_blank">
+				<img src="" alt="loading...">
+				<span class="status"></span>
+				<span><span class="name">name</span><span class="num">Viewers：<span></span></span></span>
+				<div class="layer">
+					<span><i></i></span>
+				</div>
+			</a>
+			<a class="item" href="" target="_blank">
+				<img src="" alt="loading...">
+				<span class="status"></span>
+				<span><span class="name">name</span><span class="num">Viewers：<span></span></span></span>
+				<div class="layer">
+					<span><i></i></span>
+				</div>
+			</a>
+			<a class="item" href="" target="_blank">
+				<img src="" alt="loading...">
+				<span class="status"></span>
+				<span><span class="name">name</span><span class="num">Viewers：<span></span></span></span>
+				<div class="layer">
+					<span><i></i></span>
+				</div>
+			</a>
+			<a class="item" href="" target="_blank">
+				<img src="" alt="loading...">
+				<span class="status"></span>
+				<span><span class="name">name</span><span class="num">Viewers：<span></span></span></span>
+				<div class="layer">
+					<span><i></i></span>
+				</div>
+			</a>
+			<a class="item" href="" target="_blank">
+				<img src="" alt="loading...">
+				<span class="status"></span>
+				<span><span class="name">name</span><span class="num">Viewers：<span></span></span></span>
+				<div class="layer">
+					<span><i></i></span>
+				</div>
+			</a>
+			<a class="item" href="" target="_blank">
+				<img src="" alt="loading...">
+				<span class="status"></span>
+				<span><span class="name">name</span><span class="num">Viewers：<span></span></span></span>
+				<div class="layer">
+					<span><i></i></span>
+				</div>
+			</a>
+			<a class="item" href="" target="_blank">
+				<img src="" alt="loading...">
+				<span class="status"></span>
+				<span><span class="name">name</span><span class="num">Viewers：<span></span></span></span>
+				<div class="layer">
+					<span><i></i></span>
+				</div>
+			</a>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<i class="triangle"></i>
+</body>
+</html>

@@ -13,6 +13,7 @@
 			padding: 3% 10%;
 		}
 		.box1{
+			margin: 0 auto;
 			width: 600px;
 			height: 338px;
 			overflow: hidden;
@@ -22,6 +23,7 @@
 			-ms-user-select: none;
 		}
 		.box2{
+			margin: 0 auto;
 			width: 800px;
 			height: 450px;
 			overflow: hidden;
@@ -30,8 +32,21 @@
 			-moz-user-select: none;
 			-ms-user-select: none;
 		}
+		h3{
+			text-align: center;
+		}
 		h3:nth-last-of-type(1){
 			margin-top: 100px;
+		}
+		.triangle{
+			z-index: -1;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			transform: skew(-30.5deg);
+			background-color: rgba(255,255,255,0.05);
 		}
 	</style>
 	<script type="text/javascript" src="../js/jquery.js"></script>
@@ -64,5 +79,6 @@
 		<a href="#"><img src="img/img25.jpg" alt="Crystal Maiden"></a>
 		<a href="#"><img src="img/img26.jpg" alt="Dota2"></a>
 	</div>
+	<i class="triangle"></i>
 </body>
 </html>
