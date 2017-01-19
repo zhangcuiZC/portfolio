@@ -62,11 +62,19 @@ $(function(){
 				$gotogithub.attr('href', hrefarr[idx]);
 				iframe=$('<iframe frameborder="0" src="'+srcarr[idx]+'"></iframe>');
 				$(this).parents(".col").append(iframe);
+				if(idx===0){
+					iframe=$(this).siblings('iframe');
+					jQuery(iframe.contentDocument).ready(function($) {
+						iframe.fadeIn();
+					});					
+				}else{
+					$(this).siblings('iframe').on('load', function(event) {
+						$(this).fadeIn();
+					});
+				}
+			}else{
+				$(this).siblings('iframe').fadeIn();
 			}
-			iframe=$(this).siblings('iframe');
-			jQuery(iframe.contentDocument).ready(function($) {
-				iframe.animate({top:"0"}, 400).fadeIn();
-			});
 		});
 	});
 });
