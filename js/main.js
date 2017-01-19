@@ -50,7 +50,7 @@ $(function(){
 			self.removeClass('active').siblings('.col').removeClass('inactive');
 			$close.fadeOut();
 			$gotogithub.fadeOut();
-			self.find('.col-content').fadeOut().siblings('iframe').hide();
+			self.find('.col-content').fadeOut().siblings('iframe').hide().removeClass('changelg');
 			self.find('.col-title').text(title);
 			flag=true;
 		}
@@ -59,7 +59,8 @@ $(function(){
 	$detail.click(function(event) {
 		event.stopPropagation();
 		$gotogithub.fadeIn();
-		$(this).parent(".col-content").animate({top:"-100vh"}, 400 ,function(){
+		$(this).parent(".col-content").addClass("changesm").delay(300).animate({top:"-100vh"}, 400 ,function(){
+			$(this).removeClass('changesm');
 			if(!$(this).siblings('iframe').length){
 				idx=$(this).parents(".col").attr('class').match(/\d/g)-1;
 				$gotogithub.attr('href', hrefarr[idx]);
@@ -68,15 +69,15 @@ $(function(){
 				if(idx===0){
 					iframe=$(this).siblings('iframe');
 					jQuery(iframe.contentDocument).ready(function($) {
-						iframe.fadeIn();
+						iframe.fadeIn().addClass('changelg');
 					});					
 				}else{
 					$(this).siblings('iframe').on('load', function(event) {
-						$(this).fadeIn();
+						$(this).fadeIn().addClass('changelg');
 					});
 				}
 			}else{
-				$(this).siblings('iframe').fadeIn();
+				$(this).siblings('iframe').fadeIn().addClass('changelg');
 			}
 		});
 	});
