@@ -223,7 +223,7 @@ $(function(){
 					$(".twitchdota2 .content .item").each(function(index) {
 						var info=response.streams[index];
 						$(this).attr('href', info.channel.url);	
-						$(this).find('img').attr('src', info.preview.medium).css('width',"100%");
+						$(this).find('img').attr('src', info.preview.medium);
 						$(this).find('.status').text(info.channel.status);
 						$(this).find('.name').text(info.channel.display_name);
 						$(this).find('.num span').text(info.viewers);
@@ -239,15 +239,6 @@ $(function(){
 
 		$(".twitchdota2 .btn").click(function(event) {
 			search();
-		});
-
-		var timer=null;
-		$(window).resize(function(event) {
-			timer=setTimeout(function(){
-				clearTimeout(timer);
-				var width=$(".twitchdota2 .content").width();
-				$(".item img").css('height',0.5625*0.24*width);
-			},200);
 		});
 
 		$(".twitchdota2 .item").hover(function() {
