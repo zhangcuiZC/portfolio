@@ -212,7 +212,6 @@ $(function(){
 	}());
 
 	(function(){
-		var width=$(".twitchdota2 .content").width();
 		function search(){
 			$.ajax({
 				url: 'https://api.twitch.tv/kraken/streams?game=dota%202&limit=16',
@@ -224,7 +223,7 @@ $(function(){
 					$(".twitchdota2 .content .item").each(function(index) {
 						var info=response.streams[index];
 						$(this).attr('href', info.channel.url);	
-						$(this).find('img').attr('src', info.preview.medium).css('height',0.5625*0.24*width);
+						$(this).find('img').attr('src', info.preview.medium).css('width',"100%");
 						$(this).find('.status').text(info.channel.status);
 						$(this).find('.name').text(info.channel.display_name);
 						$(this).find('.num span').text(info.viewers);
