@@ -69,15 +69,21 @@ $(function(){
 				if(idx===0){
 					iframe=$(this).siblings('iframe');
 					jQuery(iframe.contentDocument).ready(function($) {
-						iframe.fadeIn().addClass('changelg');
+						if(!flag){
+							iframe.fadeIn().addClass('changelg');
+						}
 					});					
 				}else{
 					$(this).siblings('iframe').on('load', function(event) {
-						$(this).fadeIn().addClass('changelg');
+						if(!flag){
+							$(this).fadeIn().addClass('changelg');
+						}
 					});
 				}
 			}else{
-				$(this).siblings('iframe').fadeIn().addClass('changelg');
+				if(!flag){
+					$(this).siblings('iframe').fadeIn().addClass('changelg');
+				}
 			}
 		});
 	});
