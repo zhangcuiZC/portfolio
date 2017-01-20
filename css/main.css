@@ -131,6 +131,7 @@ body{
 	text-shadow: 1px 1px 0 #333;
 	display: none;
 	overflow: hidden;
+	box-shadow: 0 0 3px 0 #666;
 }
 .col-content:before{
 	position: absolute;
@@ -206,6 +207,7 @@ body{
 	height: 100vh;
 	display: none;
 	transform: scale(0.5);
+	box-shadow: 0 0 3px 0 #666;
 }
 .col iframe.changelg{
 	transform: scale(1);

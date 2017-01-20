@@ -45,8 +45,8 @@ $(function(){
 	});
 
 	$close.click(function(event) {
+		event.stopPropagation();
 		if(!flag){
-			event.stopPropagation();
 			self.removeClass('active').siblings('.col').removeClass('inactive');
 			$close.fadeOut();
 			$gotogithub.fadeOut();
