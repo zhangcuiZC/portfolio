@@ -50,7 +50,7 @@ $(function(){
 			self.removeClass('active').siblings('.col').removeClass('inactive');
 			$close.fadeOut();
 			$gotogithub.fadeOut();
-			self.find('.col-content').fadeOut().siblings('iframe').hide().removeClass('changelg');
+			self.find('.col-content').fadeOut().siblings('iframe').hide();
 			self.find('.col-title').text(title);
 			flag=true;
 		}
@@ -66,23 +66,15 @@ $(function(){
 				$gotogithub.attr('href', hrefarr[idx]);
 				iframe=$('<iframe frameborder="0" src="'+srcarr[idx]+'"></iframe>');
 				$(this).parents(".col").append(iframe);
-				if(idx===0){
-					iframe=$(this).siblings('iframe');
-					jQuery(iframe.contentDocument).ready(function($) {
-						if(!flag){
-							iframe.fadeIn().addClass('changelg');
-						}
-					});					
-				}else{
-					$(this).siblings('iframe').on('load', function(event) {
-						if(!flag){
-							$(this).fadeIn().addClass('changelg');
-						}
-					});
-				}
+				iframe=$(this).siblings('iframe');
+				$(iframe.contentDocument).ready(function($) {
+					if(!flag){
+						iframe.show();
+					}
+				});					
 			}else{
 				if(!flag){
-					$(this).siblings('iframe').fadeIn().addClass('changelg');
+					$(this).siblings('iframe').fadeIn();
 				}
 			}
 		});

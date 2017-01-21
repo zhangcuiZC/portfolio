@@ -19,7 +19,7 @@
 				imgnum=$imgs.length,
 				imgwidth=$outerbox.width(),
 				imgheight=$outerbox.height();
-
+			
 			//给每个图片设置data-idx属性标识它们，使其能够和infobox相对应
 			for(i=0;i<imgnum;i++){
 				$imgs.eq(i).attr('data-idx', i);
