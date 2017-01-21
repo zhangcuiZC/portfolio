@@ -1,0 +1,256 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "microsoft yahei";
+}
+body{
+	color: #fff;
+	background: #f77;
+	padding: 3% 10%;
+}
+body>h3{
+	margin-top: 5%;
+	text-shadow: 1px 1px 0 #333;
+	text-align: center;
+}
+.projectclock,.projectcalculator,.projectdanmu{
+	position: relative;
+	color: #eee;
+	width: 100%;
+	padding: 3% 0;
+	border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+/*------------------------------*/
+.projectclock .clockbox{
+	padding: 20px;
+	width: 300px;
+	height: 400px;
+	margin: 0 auto;
+	text-shadow: 1px 1px 1px #333;
+}
+.projectclock .break{
+	float: left;
+	width: 150px;
+	height: 100px;
+}
+.projectclock .session{
+	float: right;
+	width: 150px;
+	height: 100px;
+}
+.projectclock .break p,.projectclock .session p{
+	font-size: 12px;
+	text-align: center;
+	margin: 10px 0;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+.projectclock .break-time,.projectclock .session-time{
+	font-size: 2em !important;
+}
+.projectclock .num{
+	display: inline-block;
+	width: 2em;
+}
+.projectclock .minus,.projectclock .plus{
+	cursor: pointer;
+}
+.projectclock .clock{
+	position: relative;
+	float: left;
+	width: 296px;
+	height: 296px;
+	border: 2px solid #f77;
+	border-radius: 50%;
+	cursor: pointer;
+	overflow: hidden;
+}
+.projectclock .clock.active{
+	border-color: #e3008c;
+}
+.projectclock .clock.active2{
+	border-color: purple !important;
+	box-shadow: 0 0 8px 4px purple;
+}
+.projectclock .clock p{
+	position: relative;
+	z-index: 2;
+	font-size: 48px;
+	margin: 60px 0;
+	text-align: center;
+}
+.projectclock .clock-dot{
+	display: none;
+}
+.projectclock .clock-layer{
+	position: absolute;
+	width: 286px;
+	height: 286px;
+	bottom: 3px;
+	left: 3px;
+	border: 2px solid #eee;
+	border-radius: 50%;
+	overflow: hidden;
+	z-index: 1;
+}
+.projectclock .clock-layer1{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background-color: #e3008c;
+	height: 0;
+	width: 100%;
+}
+.projectclock .clock-layer2{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background-color: purple;
+	height: 0;
+	width: 100%;
+}
+.projectclock .clock-layer2.active{
+	background-color: #f77 !important;
+}
+/*--------------------------*/
+.clearfix{
+	clear: both;
+}
+.projectcalculator .calbox{
+	height: 530px;
+	width: 300px;
+	margin: 20px auto 0;
+	border: 1px solid #333;
+	overflow: hidden;
+	background-color: #fff;
+	color: #000;
+}
+.projectcalculator .caltitle{
+	font-size: 12px;
+	padding-left: 2%;
+	height: 30px;
+	line-height: 30px;
+}
+.projectcalculator .caltitle span{
+	float: right;
+	width: 40px;
+	height: 30px;
+	line-height: 28px;
+	font-size: 20px;
+	text-align: center;
+	cursor: pointer;
+}
+.projectcalculator .caltitle span:hover{
+	background-color: #f10823;
+	color: #fff;
+}
+.projectcalculator .calprogress{
+	float: right;
+	padding: 0 2% 0;
+	height: 60px;
+	font-size: 24px;
+	line-height: 60px;
+	color: #888;
+}
+.projectcalculator .calresult{
+	float: right;
+	padding: 0 2% 0;
+	height: 120px;
+	font-size: 72px;
+	line-height: 120px;
+	text-align: right;
+}
+.projectcalculator .calkey{
+	float: left;
+	width: 100%;
+	height: 320px;
+	border-collapse: collapse;
+	font-size: 24px;
+}
+.projectcalculator .calkey td.smallfont{
+	font-size: 16px;
+}
+.projectcalculator .calkey tr:not(.smallfont){
+	background-color: #eee;
+}
+.projectcalculator .calkey td{
+	width: 20%;
+	height: 60px;
+	text-align: center;
+	cursor: pointer;
+}
+.projectcalculator .calkey td:hover{
+	background-color: #ccc;
+}
+.projectcalculator .calkey td span{
+	padding-left: 2px;
+	font-size: 8px;
+	vertical-align: top;
+}
+.projectcalculator .caltitle,.projectcalculator .calkey{
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+/*----------------------------------*/
+.projectdanmu .contentbox{
+	position: relative;
+	border: 1px solid #ddd;
+	border-radius: 2px;
+	margin: 0 10% 10px;
+	height: 300px;
+	overflow: hidden;
+	font-size: 15px;
+	line-height: 30px;
+	background-color: #fff;
+}
+.projectdanmu .contentbox p{
+	margin: 0;
+	position: absolute;
+	white-space: nowrap;
+}
+.projectdanmu .buttons{
+	text-align: center;
+}
+.projectdanmu input{
+	display: block;
+	width: 30%;
+	height: 32px;
+	margin: 10px auto;
+	padding: 0 10px;
+	border: 1px solid #ddd;
+	border-radius: 2px;
+}
+.projectdanmu input:focus{
+	box-shadow: 0 0 2px blue;
+}
+.projectdanmu button{
+	background-color: #fff;
+	width: 150px;
+	height: 32px;
+	border: 1px solid;
+	border-radius: 2px;
+	cursor: pointer;
+}
+.projectdanmu button.fire{
+	color: purple;
+}
+.projectdanmu button.clear{
+	color: #ccc;
+}
+/*-----------------------------*/
+
+
+.triangle{
+	z-index: -1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(255,255,255,0.05);
+	transform: skew(-30.5deg);
+}

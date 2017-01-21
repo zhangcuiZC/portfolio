@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>fccprojects</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script src="https://use.fontawesome.com/8ae039c8aa.js" async></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+	<h3>一、倒计时时钟</h3>
+	<div class="projectclock">
+		<div class="clockbox">
+			<div class="break">
+				<p class="break-name">BREAK LENGTH</p>
+				<p class="break-time"><span class="break-minus minus click">-</span><span class="break-num num">5</span><span class="break-plus plus click">+</span></p>
+			</div>
+			<div class="session">
+				<p class="session-name">SESSION LENGTH</p>
+				<p class="session-time"><span class="session-minus minus click">-</span><span class="session-num num">1</span><span class="session-plus plus click">+</span></p>
+			</div>
+			<div class="clock click start">
+				<p class="clock-name start">Session</p>
+				<p class="clock-num start"><span class="clock-minute start">1</span><span class="clock-dot start">:</span><span class="clock-second start"></span></p>
+				<div class="clock-layer start">
+					<div class="clock-layer1 start"></div>
+					<div class="clock-layer2 start"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h3>二、Win10风格计算器</h3>
+	<div class="projectcalculator">
+		<div class="calbox">
+			<p class="caltitle">计算器 By ZC<span>×</span></p>
+			<p class="calprogress"></p>
+			<div class="clearfix"></div>
+			<p class="calresult">0</p>
+			<table class="calkey">
+				<tbody>
+					<tr>
+						<td>√</td><td class="smallfont">Mod</td><td>C</td><td>←</td><td>÷</td>
+					</tr>
+					<tr>
+						<td>π</td><td><b>7</b></td><td><b>8</b></td><td><b>9</b></td><td>×</td>
+					</tr>
+					<tr>
+						<td>n!</td><td><b>4</b></td><td><b>5</b></td><td><b>6</b></td><td>-</td>
+					</tr>
+					<tr>
+						<td>±</td><td><b>1</b></td><td><b>2</b></td><td><b>3</b></td><td>+</td>
+					</tr>
+					<tr>
+						<td>(</td><td>)</td><td><b>0</b></td><td>.</td><td>=</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<h3>三、模拟弹幕</h3>
+	<div class="projectdanmu" id="projectdanmu">
+		<div class="contentbox">
+		</div>
+		<div class="buttons">
+			<input type="text" name="saysomething" placeholder="说点什么？" id="saysomething">
+			<button class="fire">发 射</button>
+			<button class="clear">清 屏</button>
+		</div>
+	</div>
+	<i class="triangle"></i>
+</body>
+</html>
