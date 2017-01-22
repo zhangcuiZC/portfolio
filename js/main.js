@@ -41,7 +41,7 @@ $(function(){
 				// });
 			});
 			title=self.find('h1').text();
-			self.find('.col-title').text('连接到"'+title+'"...');
+			self.find('.col-title').text('连接到"'+title+'"').addClass('dot');
 			flag=false;
 		}
 	});
@@ -53,7 +53,7 @@ $(function(){
 			$close.fadeOut();
 			$gotogithub.fadeOut();
 			self.find('.col-content').fadeOut().siblings('iframe').hide();
-			self.find('.col-title').text(title);
+			self.find('.col-title').text(title).removeClass('dot');
 			flag=true;
 		}
 	});

@@ -1,0 +1,84 @@
+/*以下是三个点需要用的部分*/
+.dot:after{
+	content: ".";
+	display: inline-block;
+	width: 2em;
+	text-indent: -0.5em;
+	overflow: hidden;
+	vertical-align: bottom;
+	-webkit-animation: dotting 5s infinite;
+	-o-animation: dotting 5s infinite;
+	-moz-animation: dotting 5s infinite;
+	animation: dotting 5s infinite;
+	text-align: left;
+}
+
+@keyframes dotting{
+	0%{
+		text-shadow: 0em 0 0 currentColor;
+	}
+	25%{
+		text-shadow: 0.7em 0 0 currentColor;
+	}
+	50%{
+		text-shadow: 0.7em 0 0 currentColor,1.3em 0 0 currentColor;
+	}
+	75%{
+		text-shadow: 0.7em 0 0 currentColor,1.3em 0 0 currentColor,1.9em 0 0 currentColor;
+	}
+	100%{
+		text-shadow: 0em 0 0 currentColor;
+	}
+}
+@-webkit-keyframes dotting{
+	0%{
+		text-shadow: 0em 0 0 currentColor;
+	}
+	25%{
+		text-shadow: 0.7em 0 0 currentColor;
+	}
+	50%{
+		text-shadow: 0.7em 0 0 currentColor,1.3em 0 0 currentColor;
+	}
+	75%{
+		text-shadow: 0.7em 0 0 currentColor,1.3em 0 0 currentColor,1.9em 0 0 currentColor;
+	}
+	100%{
+		text-shadow: 0em 0 0 currentColor;
+	}
+}
+@-o-keyframes dotting{
+	0%{
+		text-shadow: 0em 0 0 currentColor;
+	}
+	25%{
+		text-shadow: 0.7em 0 0 currentColor;
+	}
+	50%{
+		text-shadow: 0.7em 0 0 currentColor,1.3em 0 0 currentColor;
+	}
+	75%{
+		text-shadow: 0.7em 0 0 currentColor,1.3em 0 0 currentColor,1.9em 0 0 currentColor;
+	}
+	100%{
+		text-shadow: 0em 0 0 currentColor;
+	}
+}
+@-moz-keyframes dotting{
+	0%{
+		text-shadow: 0em 0 0 currentColor;
+	}
+	25%{
+		text-shadow: 0.7em 0 0 currentColor;
+	}
+	50%{
+		text-shadow: 0.7em 0 0 currentColor,1.3em 0 0 currentColor;
+	}
+	75%{
+		text-shadow: 0.7em 0 0 currentColor,1.3em 0 0 currentColor,1.9em 0 0 currentColor;
+	}
+	100%{
+		text-shadow: 0em 0 0 currentColor;
+	}
+}
+/*以上是三个点需要用的部分*/
