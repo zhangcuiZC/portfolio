@@ -34,12 +34,7 @@ $(function(){
 			self=$(this);
 			self.addClass('active').siblings('.col').addClass('inactive');
 			$close.fadeIn();
-			self.find('.col-content').css('top', '0').fadeIn(400, function() {
-				// imgs=self.find('img');
-				// imgs.each(function(index, el) {
-				// 	$(el).attr('src', $(el).attr('data-src'));
-				// });
-			});
+			self.find('.col-content').css('top', '0').show();
 			title=self.find('h1').text();
 			self.find('.col-title').text('连接到"'+title+'"').addClass('dot');
 			flag=false;

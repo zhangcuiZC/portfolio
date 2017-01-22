@@ -372,4 +372,6 @@ $(function(){
 			};
 		};
 	}());
+
+	$(".triangle").addClass('loaded');
 });

@@ -247,4 +247,6 @@ $(function(){
 			$(this).find('.layer').stop().fadeOut(400).find('span').removeClass('hovered');
 		});
 	})();
+
+	$(".triangle").addClass('loaded');
 });
