@@ -15,7 +15,8 @@ $(function(){
 			"https://www.cnblogs.com/zczhangcui/",
 			"project-slideshow/index.html",
 			"project-ajax/index.html",
-			"project-fcc/index.html"
+			"project-fcc/index.html",
+			"project-others/index.html"
 			],
 		hrefarr=[
 			"https://github.com/zhangcuiZC/zhangcuiZC.github.io",
@@ -47,7 +48,7 @@ $(function(){
 			self.removeClass('active').siblings('.col').removeClass('inactive');
 			$close.fadeOut();
 			$gotogithub.fadeOut();
-			self.find('.col-content').fadeOut().siblings('iframe').hide();
+			self.find('.col-content').fadeOut().siblings('iframe').removeClass('changelg');
 			self.find('.col-title').text(title).removeClass('dot');
 			flag=true;
 		}
@@ -56,7 +57,7 @@ $(function(){
 	$detail.click(function(event) {
 		event.stopPropagation();
 		$gotogithub.fadeIn();
-		$(this).parent(".col-content").addClass("changesm").delay(300).animate({top:"-100vh"}, 400 ,function(){
+		$(this).parent(".col-content").addClass("changesm").delay(200).animate({top:"-100vh"}, 300 ,function(){
 			$(this).removeClass('changesm');
 			if(!$(this).siblings('iframe').length){
 				idx=$(this).parents(".col").attr('class').match(/\d/g)-1;
@@ -64,14 +65,21 @@ $(function(){
 				iframe=$('<iframe frameborder="0" src="'+srcarr[idx]+'"></iframe>');
 				$(this).parents(".col").append(iframe);
 				iframe=$(this).siblings('iframe');
-				$(iframe.contentDocument).ready(function($) {
+				
+				if(idx===0){
 					if(!flag){
-						iframe.show();
+						iframe.addClass('changelg');
 					}
-				});				
+				}else{
+					iframe.on('load', function() {
+						if(!flag){
+							iframe.addClass('changelg');
+						}
+					});
+				}
 			}else{
 				if(!flag){
-					$(this).siblings('iframe').fadeIn();
+					$(this).siblings('iframe').addClass('changelg');
 				}
 			}
 		});
