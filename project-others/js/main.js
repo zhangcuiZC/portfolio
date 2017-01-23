@@ -49,5 +49,5 @@
 
 $(function(){
 	$(".heroinfo").makeSortable();
-	$(".triangle").addClass('loaded');
+	window.onload=function(){$(".triangle").addClass('loaded');};
 });

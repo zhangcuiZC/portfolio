@@ -28,7 +28,7 @@ $(function(){
 			];
 
 	$col.each(function(index, el) {
-		$(this).animate({top:"0"}, 100+index*100);
+		$(this).animate({top:"0"}, 100+index*150);
 	});
 	$col.click(function(event) {
 		if(flag){
@@ -57,7 +57,7 @@ $(function(){
 	$detail.click(function(event) {
 		event.stopPropagation();
 		$gotogithub.fadeIn();
-		$(this).parent(".col-content").addClass("changesm").delay(200).animate({top:"-100vh"}, 300 ,function(){
+		$(this).parents(".col-content").addClass("changesm").delay(200).animate({top:"-100vh"}, 300 ,function(){
 			$(this).removeClass('changesm');
 			if(!$(this).siblings('iframe').length){
 				idx=$(this).parents(".col").attr('class').match(/\d/g)-1;
