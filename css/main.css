@@ -17,7 +17,7 @@ body{
 	transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 	z-index: 1;
 }
-.col h3{
+.col > h3{
 	color: #fff;
 	text-align: center;
 	margin-top: 40vh;
@@ -27,7 +27,7 @@ body{
 	transform: scale(1);
 	transition: transform 0.4s;
 }
-.col:hover h3{
+.col:hover > h3{
 	transform: scale(2);
 }
 .col1,.col1 .col-content{
@@ -236,12 +236,12 @@ body{
 
 
 /*----------------col1 flex------------------*/
-.col .col-content{
+.col1 .col-content{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 }
-.col .col-h1{
+.col1 .col-h1{
 	display: flex;
 	width: 150px;
 	height: 120px;
@@ -249,20 +249,20 @@ body{
 	flex-direction: column;
 	align-items: center;
 }
-.col .col-info{
+.col1 .col-info{
 	font-size: 12px;
 	line-height: 2em;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
-.col .col-rightinfo{
+.col1 .col-rightinfo{
 	position: relative;
 	list-style-position: inside;
 	padding: 20px;
 	border-left: 4px solid rgba(255,255,255,0.2);
 }
-.col .col-rightinfo:before{
+.col1 .col-rightinfo:before{
 	content: "";
 	width: 0;
 	height: 0;
@@ -273,10 +273,65 @@ body{
 	border-top: 10px solid transparent;
 	border-bottom: 10px solid transparent;
 }
-.col .col-next{
+.col1 .col-next{
 	display: flex;
 	width: 200px;
 	height: 130px;
 	flex-direction: column-reverse;
 	align-self: center;
+}
+/*-------------------col2 flex-----------------*/
+.col2 .col-content{
+	display: flex;
+	justify-content: space-between;
+}
+.col2 .col-h1{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex: 1.5;
+}
+.col2 .col-leftinfo{
+	font-size: 12px;
+	line-height: 2em;
+}
+.col2 .col-img{
+	display: flex;
+	transform: translateX(-500px) /*scale(0)*/;
+	flex-direction: column;
+	flex: 1;
+	padding-right: 10px;
+	border-right: 4px solid rgba(255,255,255,0.2);
+	transition: transform 0.8s;
+	justify-content: space-between;
+}
+.col2 .col-img.active{
+	transform: translateX(0) /*scale(1)*/;
+}
+.col2 .col-img img{
+	height: 120px;
+	padding: 7px;
+	background-color: #fff;
+	box-shadow: 1px 1px 1px #444;
+}
+.col2 .col-img:before{
+	content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	right:-24px;
+	top: 46%;
+	border-left: 15px solid rgba(255,255,255,0.2);
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+}
+.col2 .col-rightinfo{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	flex: 2;
+	font-weight: lighter;
+	font-size: 14px;
+	white-space: nowrap;
 }
