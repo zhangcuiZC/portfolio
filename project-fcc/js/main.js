@@ -307,7 +307,7 @@ $(function(){
 	}());
 
 	(function(){
-		window.onload=function(){
+		// $(window).on("load",function(){
 			var danmu=document.getElementById('projectdanmu'),
 				fire=danmu.getElementsByTagName('button')[0],
 				clear=danmu.querySelector(".clear"),
@@ -348,12 +348,12 @@ $(function(){
 				var movetimer=setInterval(function(){
 					var left=parseFloat(para.style.left);
 					right=parseFloat(window.getComputedStyle(para).right);
-					para.style.left=left-10+"px";
+					para.style.left=left-2+"px";
 					if(right>=width){
 						clearInterval(movetimer);
 						contentbox.removeChild(para);
 					}
-				},100);
+				},33);
 				
 			};
 
@@ -370,8 +370,7 @@ $(function(){
 					width=parseFloat(window.getComputedStyle(contentbox).width);
 				},200);
 			};
-		};
+		// });
 	}());
-
-	window.onload=function(){$(".triangle").addClass('loaded');};
 });
+$(window).on("load",function(){$(".triangle").addClass('loaded');});

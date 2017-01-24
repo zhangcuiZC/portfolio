@@ -50,4 +50,4 @@
 $(function(){
 	$(".heroinfo").makeSortable();
 });
-window.onload=function(){$(".triangle").addClass('loaded');};
+$(window).on("load",function(){$(".triangle").addClass('loaded');});

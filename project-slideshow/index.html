@@ -51,7 +51,7 @@
 			$(".box1").slideShow();
 			$(".box2").slideShowFadein({color:"#bc4728",time:4000});
 		});
-		window.onload=function(){$(".triangle").addClass('loaded');};
+		$(window).on("load",function(){$(".triangle").addClass('loaded');});
 	</script>
 </head>
 <body>
