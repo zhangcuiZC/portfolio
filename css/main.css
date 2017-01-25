@@ -32,7 +32,13 @@ body{
 }
 .topbar-icon{
 	position: absolute;
-	left: 1em;
+	left: 0;
+	top: 0;
+	width: 10vh;
+	height: 10vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .col{
 	position: absolute;
