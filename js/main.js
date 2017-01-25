@@ -80,7 +80,7 @@ $(function(){
 			flag=true;
 
 			if(self.index()===2){
-				self.find('.col3-img1').css({left: "80vw", top: "80vh"}).removeClass('active').siblings('.col3-img2').css({left: "0", top: "100vh"}).removeClass('active');
+				self.find('.col3-img1').stop(true).css({left: "80vw", top: "80vh"}).removeClass('active').siblings('.col3-img2').stop(true).removeClass('active').css({left: "0", top: "100vh"});
 				self.find('.col3-count span').text("");
 			}
 		}
