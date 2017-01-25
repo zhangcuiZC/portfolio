@@ -5,7 +5,7 @@
 }
 body{
 	color: #fff;
-	background: #F24B4B;
+	background: #8C4B7E;
 	padding: 3% 10%;
 }
 body>h3{
@@ -58,7 +58,7 @@ body>h3{
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	background-color: rgba(255,255,255,0.05);
+	background-color: rgba(0,0,0,0.05);
 	transform: skew(-30.5deg) scale(3);
 }
 .triangle.loaded{

@@ -40,6 +40,31 @@ $(function(){
 			title=self.find('h1').text();
 			self.find('.col-title').text('连接到"'+title+'"').addClass('dot');
 			flag=false;
+
+			if(self.index()===2){
+				self.find('.col3-img1').delay(300).animate({left: "10vw", top: "10vh"}, 300, function(){
+					$(this).addClass('active');
+					$(this).siblings('.col3-img2').delay(300).animate({left: "5vw", top: "40vh"}, 300, function(){
+						$(this).addClass('active');
+						var count=self.find('.col3-count span');
+						count.each(function(index, el) {
+							var countnum=parseInt($(this).attr('data-num'));
+							var num=1;
+							var counttimer=setInterval(function(){
+								$(el).text(num);
+								if(num<countnum-20){
+									num+=3;
+								}else{
+									num++;
+								}
+								if(num===countnum+1){
+									clearInterval(counttimer);
+								}
+							},60);
+						});
+					})
+				})
+			}
 		}
 	});
 
@@ -53,6 +78,11 @@ $(function(){
 			self.find('.col-img').removeClass('active');
 			self.find('.col-title').text(title).removeClass('dot');
 			flag=true;
+
+			if(self.index()===2){
+				self.find('.col3-img1').css({left: "80vw", top: "80vh"}).removeClass('active').siblings('.col3-img2').css({left: "0", top: "100vh"}).removeClass('active');
+				self.find('.col3-count span').text("");
+			}
 		}
 	});
 
