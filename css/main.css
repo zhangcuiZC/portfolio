@@ -414,3 +414,58 @@ body{
 	font-size: 1.5em;
 	font-weight: bold;
 }
+
+/*-------------col4 flex-----------------*/
+.col4 .col-content{
+	color: #000;
+	text-shadow: none;
+	display: flex;
+	justify-content: space-between;
+}
+.col4-info{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	flex: 1;
+	z-index: 1;
+}
+#col4-canvas{
+	margin-top: -10vh;
+	margin-bottom: -10vh;
+	margin-right: -10vw;
+}
+.col4 .col-h1 h1{
+	line-height: 100px;
+	font-size: 96px;
+	white-space: nowrap;
+	font-weight: lighter;
+}
+.col4 .col-content h1:before{
+	position: absolute;
+	height: 105px;
+	width: 5px;
+	left: 0;
+	top: 0;
+	content: "";
+	background-color: rgba(0,0,0,0.2);
+}
+.col4 .fa-angle-double-down{
+	width: 400px;
+	display: flex;
+	justify-content: center;
+}
+.col4 .col-leftinfo{
+	font-size: 12px;
+	line-height: 2em;
+}
+.col4 .col-leftinfo p{
+	padding-left: 1em;
+	margin-top: 1em;
+}
+.col4 .col-leftinfo i{
+	margin-left: -1em;
+}
+.col4 .detail{
+	text-shadow: none;
+	width: 400px;
+}
