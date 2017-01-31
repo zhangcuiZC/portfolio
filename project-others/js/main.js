@@ -49,5 +49,10 @@
 
 $(function(){
 	$(".heroinfo").makeSortable();
+
+	var header=document.querySelector(".dragheader");
+	header.onmousedown=function(event){
+		drag(header.parentNode,event);
+	};
 });
 $(window).on("load",function(){$(".triangle").addClass('loaded');});

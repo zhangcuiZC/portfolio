@@ -13,7 +13,7 @@ body>h3{
 	text-shadow: 1px 1px 0 #333;
 	text-align: center;
 }
-.projectloadingdots,.projectmakesortable{
+.projectloadingdots,.projectmakesortable,.projectdrag{
 	position: relative;
 	color: #eee;
 	width: 100%;
@@ -33,22 +33,50 @@ body>h3{
 	text-align: center;
 	border-collapse: collapse;
 	line-height: 2em;
-	background-color: #ccc;
+	background-color: #cfcfcf;
+	font-size: 14px;
 }
 .projectmakesortable td,.projectmakesortable th{
 	border: 1px solid #000;
 }
 .projectmakesortable tbody tr:nth-child(2n-1){
-	background-color: #ff7;
+	background-color: #efefef;
 }
 .projectmakesortable thead tr{
-	background-color: #f77;
+	background-color: #aaa;
 	cursor: pointer;
 	user-select: none;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 }
+/*------------------------------------*/
+.projectdrag{
+	height: 60vh;
+	margin: 20px 0;
+	color: #000;
+}
+.projectdrag .dragbox{
+	position: absolute;
+	left: 150px;
+	top: 100px;
+	width: 250px;
+	background-color: #eee;
+	border: 1px solid #000;
+	font-size: 12px;
+}
+.projectdrag .dragheader{
+	background-color: #ccc;
+	border-bottom: 1px solid #000;
+	padding: 3px;
+	font-weight: bold;
+}
+.projectdrag .dragcontent{
+	padding: 3px;
+}
+
+
+
 
 
 .triangle{
