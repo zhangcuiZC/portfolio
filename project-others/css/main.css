@@ -87,9 +87,9 @@ body>h3{
 	width: 100vw;
 	height: 100vh;
 	background-color: rgba(0,0,0,0.05);
-	transform: rotate(-30.5deg) scale(3);
+	transform: rotate(-45deg) scale(3);
 }
 .triangle.loaded{
-	transform: rotate(-30.5deg) scale(1.5);
+	transform: rotate(-45deg) scale(1.8);
 	transition: transform 0.8s;
 }

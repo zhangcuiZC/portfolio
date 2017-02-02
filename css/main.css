@@ -85,7 +85,7 @@ body{
 .col5,.col5 .col-content{/*AJAX项目*/
 	top: -120vh;
 	left: 57.12%;
-	background-color: #f77;
+	background-color: #fe5e5e;
 }
 .col6,.col6 .col-content{/*FCC项目*/
 	top: 120vh;
@@ -164,7 +164,7 @@ body{
 	bottom: 0;
 	z-index: 0;
 	background-color: rgba(0,0,0,0.05);
-	transform: rotate(-30.5deg) scale(1.5);
+	transform: rotate(-45deg) scale(1.8);
 	transition: all 0.4s;	
 }
 .col-content.changesm{
@@ -475,8 +475,9 @@ body{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	color: #000;
-	text-shadow: none;
+	color: #fff;
+	background: url(../img/col5-bg.jpg) center no-repeat;
+	background-size: cover;
 }
 .col5 .col-h1 h1{
 	font-size: 72px;
@@ -491,7 +492,7 @@ body{
 	left: 0;
 	top: 0;
 	content: "";
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgba(255,255,255,0.2);
 }
 .col5-info{
 	width: 100%;
@@ -503,7 +504,7 @@ body{
 	width: 19vw;
 	min-width: 150px;
 	height: 50vh;
-	border: 2px solid rgba(0,0,0,0.2);
+	border: 1px solid rgba(255,255,255,0.2);
 	box-sizing: border-box;
 	/*background-color: #f77;*/
 	position: relative;
@@ -539,30 +540,18 @@ body{
 .col5 .lefttop{
 	left: -7px;
 	top: -7px;
-	border-top: 1px solid #000;
-	border-left: 1px solid #000;
-}
-.col5 .righttop{
-	right: -7px;
-	top: -7px;
-	border-top: 1px solid #000;
-	border-right: 1px solid #000;
-}
-.col5 .leftbottom{
-	left: -7px;
-	bottom: -7px;
-	border-bottom: 1px solid #000;
-	border-left: 1px solid #000;
+	border-top: 1px solid rgba(255,255,255,0.5);
+	border-left: 1px solid rgba(255,255,255,0.5);
 }
 .col5 .rightbottom{
 	right: -7px;
 	bottom: -7px;
-	border-bottom: 1px solid #000;
-	border-right: 1px solid #000;
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+	border-right: 1px solid rgba(255,255,255,0.5);
 }
 .col5 .col-content:before{
-	background: url(../img/col5-bg.jpg) center no-repeat;
-	-webkit-background-size: cover;
-	background-size: cover;
+	/*background: url(../img/col5-bg.jpg) center no-repeat;
+	background-size: cover;*/
+	background-color: rgba(0,0,0,0.05);
 }
 /*--------------col6 flex---------*/

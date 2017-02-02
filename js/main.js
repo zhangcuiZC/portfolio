@@ -38,7 +38,7 @@ $(function(){
 			$close.fadeIn();
 			self.find('.col-content').css('top', '0').show().find('.col-img').addClass('active');
 			title=self.find('h1').text();
-			self.find('.col-title').text('连接到"'+title+'"').addClass('dot');
+			self.find('.col-title').text('正在打开"'+title+'"');
 			flag=false;
 
 			if(self.index()===2){
@@ -76,7 +76,7 @@ $(function(){
 			$gotogithub.fadeOut();
 			self.find('.col-content').fadeOut().siblings('iframe').removeClass('changelg');
 			self.find('.col-img').removeClass('active');
-			self.find('.col-title').text(title).removeClass('dot');
+			self.find('.col-title').text(title);
 			flag=true;
 
 			if(self.index()===2){
