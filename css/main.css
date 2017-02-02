@@ -153,7 +153,7 @@ body{
 	text-shadow: 1px 1px 0 #333;
 	display: none;
 	overflow: hidden;
-	box-shadow: 0 0 3px 0 #666;
+	outline: 2px solid rgba(255,255,255,0.2);
 }
 .col-content:before{
 	position: absolute;
@@ -213,13 +213,12 @@ body{
 	height: 100vh;
 	transform: scale(0.5);
 	opacity: 0;
-	box-shadow: 0 0 3px 0 #666;
+	outline: 2px solid rgba(255,255,255,0.2);
 }
 .col iframe.changelg{
 	transform: scale(1);
 	opacity: 1;
 	transition: all 0.4s;
-	background-color: #eee;
 }
 .copy{
 	position: fixed;
