@@ -219,6 +219,7 @@ body{
 	transform: scale(1);
 	opacity: 1;
 	transition: all 0.4s;
+	background-color: #eee;
 }
 .copy{
 	position: fixed;

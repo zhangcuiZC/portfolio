@@ -96,19 +96,20 @@ $(function(){
 				$gotogithub.attr('href', hrefarr[idx]);
 				iframe=$('<iframe frameborder="0" src="'+srcarr[idx]+'"></iframe>');
 				$(this).parents(".col").append(iframe);
-				iframe=$(this).siblings('iframe');
 				
-				if(idx===0){
+				// if(idx===0){
 					if(!flag){
-						iframe.addClass('changelg');
-					}
-				}else{
-					iframe.on('load', function() {
-						if(!flag){
+						var iframetimer=setTimeout(function(){
 							iframe.addClass('changelg');
-						}
-					});
-				}
+						},300);
+					}
+				// }else{
+				// 	iframe.on('load', function() {
+				// 		if(!flag){
+				// 			iframe.addClass('changelg');
+				// 		}
+				// 	});
+				// }
 			}else{
 				if(!flag){
 					$(this).siblings('iframe').addClass('changelg');
