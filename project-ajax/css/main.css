@@ -411,9 +411,9 @@ body>h3{
 	width: 100vw;
 	height: 100vh;
 	background-color: rgba(0,0,0,0.05);
-	transform: skew(-30.5deg) scale(3);
+	transform: rotate(-30.5deg) scale(3);
 }
 .triangle.loaded{
-	transform: skew(-30.5deg) scale(1);
+	transform: rotate(-30.5deg) scale(1.5);
 	transition: transform 0.8s;
 }

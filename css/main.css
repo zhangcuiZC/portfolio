@@ -164,7 +164,7 @@ body{
 	bottom: 0;
 	z-index: 0;
 	background-color: rgba(0,0,0,0.05);
-	transform: skew(-30.5deg);
+	transform: rotate(-30.5deg) scale(1.5);
 	transition: all 0.4s;	
 }
 .col-content.changesm{
@@ -491,7 +491,7 @@ body{
 	left: 0;
 	top: 0;
 	content: "";
-	background-color: rgba(255,255,255,0.2);
+	background-color: rgba(0,0,0,0.2);
 }
 .col5-info{
 	width: 100%;
@@ -503,7 +503,7 @@ body{
 	width: 19vw;
 	min-width: 150px;
 	height: 50vh;
-	border: 2px solid rgba(255,255,255,0.2);
+	border: 2px solid rgba(0,0,0,0.2);
 	box-sizing: border-box;
 	/*background-color: #f77;*/
 	position: relative;
@@ -539,27 +539,30 @@ body{
 .col5 .lefttop{
 	left: -7px;
 	top: -7px;
-	border-top: 1px solid #fff;
-	border-left: 1px solid #fff;
+	border-top: 1px solid #000;
+	border-left: 1px solid #000;
 }
 .col5 .righttop{
 	right: -7px;
 	top: -7px;
-	border-top: 1px solid #fff;
-	border-right: 1px solid #fff;
+	border-top: 1px solid #000;
+	border-right: 1px solid #000;
 }
 .col5 .leftbottom{
 	left: -7px;
 	bottom: -7px;
-	border-bottom: 1px solid #fff;
-	border-left: 1px solid #fff;
+	border-bottom: 1px solid #000;
+	border-left: 1px solid #000;
 }
 .col5 .rightbottom{
 	right: -7px;
 	bottom: -7px;
-	border-bottom: 1px solid #fff;
-	border-right: 1px solid #fff;
+	border-bottom: 1px solid #000;
+	border-right: 1px solid #000;
 }
 .col5 .col-content:before{
-	background-image: radial-gradient(ellipse farthest-corner at 90vw 0vh , #ff7 0%, #f37171 50%);
+	background: url(../img/col5-bg.jpg) center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
 }
+/*--------------col6 flex---------*/
