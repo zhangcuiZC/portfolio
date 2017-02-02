@@ -13,7 +13,7 @@ body>h3{
 	text-shadow: 1px 1px 0 #333;
 	text-align: center;
 }
-.projectclock,.projectcalculator,.projectdanmu,.projectcash{
+.projectclock,.projectcalculator,.projectdanmu,.projectcash,.projectalgo{
 	position: relative;
 	color: #eee;
 	width: 100%;
@@ -331,6 +331,28 @@ body>h3{
 .change-insuff{
 	color: red;
 }
+/*--------------------------*/
+.projectalgo{
+	font-size: 14px;
+	line-height: 3em;
+}
+.algoitem{
+	display: flex;
+	width: 100%;
+	/*justify-content: space-around;*/
+	background-color: rgba(255,255,255,0.2);
+}
+.algoitem button{
+	background-color: rgba(255,255,255,0.2);
+	outline: none;
+	border: none;
+	color: #fff;
+	transition: all 0.4s;
+}
+.algoitem button:hover{
+	background-color: rgba(255,255,255,0.05);
+}
+
 
 
 .triangle{

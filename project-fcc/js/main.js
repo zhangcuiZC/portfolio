@@ -460,5 +460,135 @@ $(function(){
 			}
 		});
 	}());
+
+	(function(){
+		var btn1=$(".algoitem1 button");
+		var btn2=$(".algoitem2 button");
+		var btn3=$(".algoitem3 button");
+
+		function steamroller(arr) {
+		  	//递归
+		  	var newarr=[];
+		  	roll(arr);
+		  
+		  	function roll(arr){
+		    
+		    	for(var i=0;i<arr.length;i++){
+		      		if(Array.isArray(arr[i])===false){
+		        		newarr.push(arr[i]);
+		      		}else roll(arr[i]);
+		    	}
+		    
+		   	}
+
+		  	return newarr;
+		}
+
+		function sym(args) {
+		  	//作用是保证每个数组里的数都是不重复的,重复的只保留一个
+		  	function norepeat(arr){
+		  	  	return arr.filter(function(val,index,array){
+		  	    	return array.indexOf(val)===index;
+		  	  	});
+		  	}
+		  	//concat后如果有重复的数，把重复的数全部去掉
+		  	function add(arr1,arr2){
+		  	  	var arr=norepeat(arr1).concat(norepeat(arr2));
+		  	  	return arr.filter(function(val,index,array){
+		  	    	return array.indexOf(val)===array.lastIndexOf(val);
+		  	  	});
+		  	}
+		  	//累加并排序
+		  	return args.reduce(add).sort(function(num1,num2){
+		  	  	return num1-num2;
+		  	});
+		}
+
+		function smallestCommons(arr) {
+		  	//分解质因数法，分解为若干个质数相乘
+		  	var arrratio=[];
+		  	var min=Math.min(arr[0],arr[1]);
+		  	var max=Math.max(arr[0],arr[1]);
+		  	for(var i=min+1;i<max;i++){
+		    	arr.push(i);
+		  	}
+		  	//找出小于max的所有质数
+		  	var arrtemp=[];
+		  	for(var j=2;j<=max;j++){
+		    	arrtemp.push(j);
+		  	}
+		  	var prime=arrtemp.filter(function(val){
+		    	for(var k=2;k<val;k++){
+		      		if(val%k===0){
+		        		return false;
+		      		}
+		    	}
+		    	return true;
+		  	});
+		  	//用这一排数分别除以从小到大的质数，如果某个数能除尽，则把那个数变为除后的数，把这个质数放在arrratio数组里备用。直至arr里每个数都变成1。这个方法是分解质因数法，详情见小学或初中课本。
+		  	while(arr.reduce(function(a,b){return a+b;})!==(max-min+1)){
+		    	for(var m=0;m<prime.length;m++){
+		      		var isratio=0;
+		      		for(var n=0;n<arr.length;n++){
+		        		if(arr[n]%prime[m]===0){
+		          			isratio=1;
+		          			arr[n]=arr[n]/prime[m];
+		        		}
+		      		}
+			      	if(isratio){
+			        	arrratio[arrratio.length]=prime[m];
+			      	}
+		    	}
+		  	}
+		  	//最后把arrratio数组里的数相乘便是这一组数的最小公倍数。
+		  	return arrratio.reduce(function(a,b){return a*b;});
+		}
+
+		btn1.click(function(event) {
+			var arr1;
+			try{
+				arr1=eval($("input[name='item1arr']").val());
+			}catch(e){
+				$("input[name='item1result']").val("请输入正确的数组");
+				return;
+			};
+			if(Array.isArray(arr1)){
+				var result=steamroller(arr1);
+				$("input[name='item1result']").val("["+result+"]");
+			}else return;
+		});
+
+		btn2.click(function(event) {
+			var arr2;
+			try{
+				arr2=eval("["+$("input[name='item2arr']").val()+"]");
+			}catch(e){
+				$("input[name='item2result']").val("请输入正确的数组");
+				return;
+			};
+			if(arr2.every(function(val){return Array.isArray(val);})){
+				var result=sym(arr2);
+				$("input[name='item2result']").val("["+result+"]");
+			}else{
+				$("input[name='item2result']").val("请输入正确的数组");
+			}
+		});
+
+		btn3.click(function(event) {
+			var arr3;
+			try{
+				arr3=eval($("input[name='item3arr']").val());
+			}catch(e){
+				$("input[name='item3result']").val("请输入正确的数组");
+				return;
+			};
+			if(Array.isArray(arr3)&&arr3.every(function(val){return parseInt(val)===val;})&&arr3.length===2&&arr3[0]<arr3[1]){
+				var result=smallestCommons(arr3);
+				$("input[name='item3result']").val(result);
+			}else{
+				$("input[name='item3result']").val("请输入正确的整数范围");
+			}
+		});
+	}());
 });
 $(window).on("load",function(){$(".triangle").addClass('loaded');});
