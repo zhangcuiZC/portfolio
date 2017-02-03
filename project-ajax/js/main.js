@@ -102,7 +102,11 @@ $(function(){
 						$(".todayinfo .temprange").text(temprange);
 						$(".todayinfo .type").text(now.cond.txt);
 						$(".todayinfo .wind").text(now.wind.dir+now.wind.sc+"级");
-						$(".todayinfo .aqi").text(info.HeWeather5[0].aqi.city.aqi+" "+info.HeWeather5[0].aqi.city.qlty);
+						if(info.HeWeather5[0].aqi){
+							$(".todayinfo .aqi").text(info.HeWeather5[0].aqi.city.aqi+" "+info.HeWeather5[0].aqi.city.qlty);
+						}else{
+							$(".todayinfo .aqi").text("暂无数据");
+						}
 
 						// 未来四天预报
 						$(".future li").each(function(index) {

@@ -37,7 +37,7 @@ $(function(){
 			self.addClass('active').siblings('.col').addClass('inactive');
 			$close.fadeIn();
 			self.find('.col-content').css('top', '0').show().find('.col-img').addClass('active');
-			title=self.find('h1').text();
+			title=self.find('.col-h1 h1').text();
 			self.find('.col-title').text('正在打开"'+title+'"');
 			flag=false;
 

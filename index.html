@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/loading-dots.css">
+	<link rel="stylesheet" type="text/css" href="css/col7.css">
 	<script type="text/javascript" src="js/jquery.js"></script>
 </head>
 <body>
@@ -173,35 +174,10 @@
 		<div class="col-content">
 			<div class="col-h1">
 				<h1>FreeCodeCamp项目</h1>
-				<i class="fa fa-angle-double-down fa-3x"></i>
 			</div>
 			<div class="col-info">
-				<div class="col-leftinfo">
-					<p><i class="fa fa-quote-left"></i>&nbsp;&nbsp;个人主页是我的早期的练习项目</p>
-					<p><i class="fa fa-quote-left"></i>&nbsp;&nbsp;初期是为了练习Bootstrap而设计的</p>
-					<p><i class="fa fa-quote-left"></i>&nbsp;&nbsp;之后独立编写或使用插件实现loading遮罩层、滚动动画等功能</p>
-					<p><i class="fa fa-quote-left"></i>&nbsp;&nbsp;个人主页展示了我的部分个人作品、<b>学习进度及学习计划</b></p>
-				</div>
-				<i class="fa fa-angle-double-right fa-3x"></i>
-				<div class="col-rightinfo">
-					<h4><i class="fa fa-list"></i>&nbsp;&nbsp;&nbsp;学习进度</h4>
-					<ul class="fa-ul">
-						<li><i class="fa fa-check-square-o"></i>&nbsp;&nbsp;完成《Headfirst HTML与CSS》的学习，掌握HTML及CSS；</li>
-						<li><i class="fa fa-check-square-o"></i>&nbsp;&nbsp;完成《JavaScript DOM编程艺术》的学习，掌握DOM操作；</li>
-						<li><i class="fa fa-check-square-o"></i>&nbsp;&nbsp;完成《锋利的jQuery》的学习，熟练使用jQuery；</li>
-						<li><i class="fa fa-check-square-o"></i>&nbsp;&nbsp;完成《JavaScript高级程序设计》的学习，对难点进行逐渐消化理解；</li>
-						<li><i class="fa fa-check-square-o"></i>&nbsp;&nbsp;完成《CSS权威指南》的学习；</li>
-						<li><i class="fa fa-plus-square-o"></i>&nbsp;&nbsp;正在进行《JavaScript权威指南》的学习。</li>
-					</ul>
-					<h4><i class="fa fa-list"></i>&nbsp;&nbsp;&nbsp;学习计划</h4>
-					<ul class="fa-ul">
-						<li><i class="fa fa-square-o"></i>&nbsp;&nbsp;学习《JavaScript语言精粹》；</li>
-						<li><i class="fa fa-square-o"></i>&nbsp;&nbsp;学习Vue.js。</li>
-					</ul>
-				</div>
 			</div>
 			<div class="col-next">
-				<!-- <i class="fa fa-angle-double-down fa-3x"></i> -->
 				<span class="col6-detail detail">查看详情&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-circle-down fa-lg"></i></span>
 			</div>
 		</div>
@@ -211,35 +187,23 @@
 		<div class="col-content">
 			<div class="col-h1">
 				<h1>其他项目</h1>
-				<i class="fa fa-angle-double-down fa-3x"></i>
 			</div>
-			<div class="col-info">
-				<div class="col-leftinfo">
-					<p><i class="fa fa-quote-left"></i>&nbsp;&nbsp;个人主页是我的早期的练习项目</p>
-					<p><i class="fa fa-quote-left"></i>&nbsp;&nbsp;初期是为了练习Bootstrap而设计的</p>
-					<p><i class="fa fa-quote-left"></i>&nbsp;&nbsp;之后独立编写或使用插件实现loading遮罩层、滚动动画等功能</p>
-					<p><i class="fa fa-quote-left"></i>&nbsp;&nbsp;个人主页展示了我的部分个人作品、<b>学习进度及学习计划</b></p>
-				</div>
-				<i class="fa fa-angle-double-right fa-3x"></i>
-				<div class="col-rightinfo">
-					<h4><i class="fa fa-list"></i>&nbsp;&nbsp;&nbsp;学习进度</h4>
-					<ul class="fa-ul">
-						<li><i class="fa fa-check-square-o"></i>&nbsp;&nbsp;完成《Headfirst HTML与CSS》的学习，掌握HTML及CSS；</li>
-						<li><i class="fa fa-check-square-o"></i>&nbsp;&nbsp;完成《JavaScript DOM编程艺术》的学习，掌握DOM操作；</li>
-						<li><i class="fa fa-check-square-o"></i>&nbsp;&nbsp;完成《锋利的jQuery》的学习，熟练使用jQuery；</li>
-						<li><i class="fa fa-check-square-o"></i>&nbsp;&nbsp;完成《JavaScript高级程序设计》的学习，对难点进行逐渐消化理解；</li>
-						<li><i class="fa fa-check-square-o"></i>&nbsp;&nbsp;完成《CSS权威指南》的学习；</li>
-						<li><i class="fa fa-plus-square-o"></i>&nbsp;&nbsp;正在进行《JavaScript权威指南》的学习。</li>
-					</ul>
-					<h4><i class="fa fa-list"></i>&nbsp;&nbsp;&nbsp;学习计划</h4>
-					<ul class="fa-ul">
-						<li><i class="fa fa-square-o"></i>&nbsp;&nbsp;学习《JavaScript语言精粹》；</li>
-						<li><i class="fa fa-square-o"></i>&nbsp;&nbsp;学习Vue.js。</li>
-					</ul>
+			<div class="col7-info">
+				<p id="start">A short time ago in a browser very, very close&hellip;</p>
+				<h1>Other Projects<sub>其他项目</sub></h1>
+				<div id="titles">
+	  				<div id="titlecontent">
+	    				<p class="center">EPISODE VII<br>其他项目</p>
+	    				<p>这里包括了我的一些小DEMO，来源于一些思考或者收藏或改进的代码片段。</p>
+	    				<p>1、Loading的点点点效果，使用text-shadow实现。在学习过程中受到启发而实现的一个小功能。</p>
+					    <p>2、&lt;table&gt;元素的点击表头排序功能。根据JavaScript权威指南学习过程中收藏的代码片段改进而来，可实现点击从小到大排序，再次点击反向排序的功能。</p>
+	 				   	<p>3、绝对定位元素的拖拽功能。根据鼠标事件实现绝对定位元素的拖拽DEMO。</p>
+	   					<p>4、后期将继续更新。</p>
+	    				<p class="enter">ENDED……</p>
+	    			</div>
 				</div>
 			</div>
 			<div class="col-next">
-				<!-- <i class="fa fa-angle-double-down fa-3x"></i> -->
 				<span class="col7-detail detail">查看详情&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-circle-down fa-lg"></i></span>
 			</div>
 		</div>

@@ -6,10 +6,10 @@
 	text-indent: -0.5em;
 	overflow: hidden;
 	vertical-align: bottom;
-	-webkit-animation: dotting 5s infinite;
-	-o-animation: dotting 5s infinite;
-	-moz-animation: dotting 5s infinite;
-	animation: dotting 5s infinite;
+	-webkit-animation: dotting 5s infinite step-end;
+	-o-animation: dotting 5s infinite step-end;
+	-moz-animation: dotting 5s infinite step-end;
+	animation: dotting 5s infinite step-end;
 	text-align: left;
 }
 

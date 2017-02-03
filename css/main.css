@@ -6,7 +6,8 @@
 }
 body{
 	overflow: hidden;
-	background: #333;
+	background: #333 /*url(../img/body-bg.jpg) no-repeat center fixed*/;
+	/*background-size: cover;*/
 }
 .topbar{
 	position: absolute;
@@ -177,11 +178,11 @@ body{
 	z-index: 1;
 }
 
-.col-content h1{
+.col-h1 h1{
 	text-indent: 10px;
 	line-height: 40px;
 }
-.col-content h1:before{
+.col-h1 h1:before{
 	position: absolute;
 	height: 45px;
 	width: 5px;
@@ -203,7 +204,7 @@ body{
 	text-shadow: 1px 1px 0 #333;
 }
 .detail:hover{
-	background-color: rgba(255,255,255,0.3);
+	background-color: rgba(255,255,255,0.6) !important;
 	transition: all 0.4s;
 }
 .col iframe{
@@ -506,7 +507,6 @@ body{
 	height: 50vh;
 	border: 1px solid rgba(255,255,255,0.2);
 	box-sizing: border-box;
-	/*background-color: #f77;*/
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -526,7 +526,6 @@ body{
 .col5 .detail{
 	width: 20vw;
 	min-width: 200px;
-	text-shadow: none;
 }
 .col5 .col-next{
 	display: flex;
@@ -549,9 +548,41 @@ body{
 	border-bottom: 1px solid rgba(255,255,255,0.5);
 	border-right: 1px solid rgba(255,255,255,0.5);
 }
-.col5 .col-content:before{
-	/*background: url(../img/col5-bg.jpg) center no-repeat;
-	background-size: cover;*/
-	background-color: rgba(0,0,0,0.05);
-}
 /*--------------col6 flex---------*/
+
+
+
+
+
+
+/*---------------col7 flex----------*/
+.col7 .col-content{
+	color: #fff;
+	background: url(../img/col7-bg.jpg) center no-repeat;
+	background-size: cover;
+	display: none;
+	text-shadow: none;
+}
+.col7 .col-next{
+	position: absolute;
+	right: 10vw;
+	bottom: 10vh;
+}
+.col7 .detail{
+	background-color: rgba(255,255,255,0.2);
+}
+.col7 .col-h1 h1{
+	font-size: 72px;
+	font-weight: lighter;
+	line-height: 80px;
+	white-space: nowrap;
+}
+.col7 .col-h1 h1:before{
+	position: absolute;
+	height: 85px;
+	width: 5px;
+	left: 0;
+	top: 0;
+	content: "";
+	background-color: rgba(255,255,255,0.2);
+}
