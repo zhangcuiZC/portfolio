@@ -619,6 +619,7 @@ body{
 	align-items: center;
 	background-color: rgba(0,0,0,0.05);
 	transition: background-color 4s;
+	position: relative;
 }
 .col6-rightbottom-item.item1{
 	background-color: #fbffb9;
@@ -629,14 +630,19 @@ body{
 .col6-rightbottom-item.item3{
 	background-color: #EC7357;
 }
-
-.col6 .detail{
-	width: 100%;
-	height: 100%;
+.col6-detail{
+	position: absolute;
+	width: auto;
+	height: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	color: #fff;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: #fff;
+	white-space: nowrap;
 }
 
 /*---------------col7 flex----------*/
