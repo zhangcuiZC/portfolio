@@ -150,19 +150,16 @@ p#start{
     pointer-events: none;
 }
 
-#titles p
-{
+#titles p{
     text-align: justify;
     margin: 0.8em 0;
 }
 
-#titles p.center
-{
+#titles p.center{
     text-align: center;
 }
 
-#titlecontent
-{
+#titlecontent{
     position: absolute;
     top: 100%;
     -webkit-animation: scroll 50s linear 4s infinite;

@@ -9,6 +9,7 @@ $(function(){
 		imgs=null,
 		idx,
 		flag=true,
+		firecolortimer=null,
 		srcarr=[
 			"https://zhangcuizc.github.io/",
 			"https://zhangcuizc.github.io/jd-new",
@@ -65,6 +66,15 @@ $(function(){
 					})
 				})
 			}
+
+			if(self.index()===5){
+				firecolortimer=setTimeout(function(){
+					self.find('.col6-fire').addClass('active');
+					self.find('.col6-rightbottom-item').each(function(index, el) {
+						$(el).addClass('item'+(index+1));
+					});
+				},1000);
+			}
 		}
 	});
 
@@ -82,6 +92,16 @@ $(function(){
 			if(self.index()===2){
 				self.find('.col3-img1').stop(true).css({left: "80vw", top: "80vh"}).removeClass('active').siblings('.col3-img2').stop(true).removeClass('active').css({left: "0", top: "100vh"});
 				self.find('.col3-count span').text("");
+			}
+
+			if(self.index()===5){
+				if(firecolortimer){
+					clearTimeout(firecolortimer);
+				}
+				self.find('.col6-fire').removeClass('active');
+				self.find('.col6-rightbottom-item').each(function(index, el) {
+					$(el).removeClass('item'+(index+1));
+				});
 			}
 		}
 	});
