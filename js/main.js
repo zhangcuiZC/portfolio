@@ -35,7 +35,8 @@ $(function(){
 	$col.click(function(event) {
 		if(flag){
 			self=$(this);
-			self.addClass('active').siblings('.col').addClass('inactive');
+			idx=self.index();
+			self.addClass('active changebg').siblings('.col').addClass('inactive');
 			$close.fadeIn();
 			self.find('.col-content').css('top', '0').show().find('.col-img').addClass('active');
 			title=self.find('.col-h1 h1').text();
@@ -81,7 +82,7 @@ $(function(){
 	$close.click(function(event) {
 		event.stopPropagation();
 		if(!flag){
-			self.removeClass('active').siblings('.col').removeClass('inactive');
+			self.removeClass('active changebg').siblings('.col').removeClass('inactive');
 			$close.fadeOut();
 			$gotogithub.fadeOut();
 			self.find('.col-content').removeClass("changesm").fadeOut().siblings('iframe').removeClass('changelg');
@@ -108,7 +109,7 @@ $(function(){
 
 	$detail.click(function(event) {
 		event.stopPropagation();
-		$gotogithub.fadeIn();
+		$gotogithub.attr('href', hrefarr[idx]).fadeIn();
 		var thiscontent=$(this).parents(".col-content");
 
 		thiscontent.addClass("changesm");
@@ -118,7 +119,6 @@ $(function(){
 			if(!flag){
 				iframe.addClass('changelg');
 				var iframetimer=setTimeout(function(){
-					idx=thiscontent.parents(".col").attr('class').match(/\d/g)-1;
 					iframe.attr('src', srcarr[idx]);
 				},1000);
 			}

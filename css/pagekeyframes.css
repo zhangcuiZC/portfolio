@@ -1,7 +1,7 @@
 .col-content.changesm{
-	animation: contentchangesm 0.5s ease-out forwards;
-	-webkit-animation: contentchangesm 0.5s ease-out forwards;
-	-moz-animation: contentchangesm 0.5s ease-out forwards;
+	animation: contentchangesm 0.3s ease-in forwards;
+	-webkit-animation: contentchangesm 0.3s ease-in forwards;
+	-moz-animation: contentchangesm 0.3s ease-in forwards;
 }
 @keyframes contentchangesm{
 	33%{transform: scale(0.8);}

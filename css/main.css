@@ -6,7 +6,7 @@
 }
 body{
 	overflow: hidden;
-	background: #333；
+	background: #333;
 }
 .topbar{
 	position: absolute;
@@ -46,8 +46,21 @@ body{
 	width: 14.28%;
 	cursor: pointer;
 	overflow: hidden;
-	transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+	transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 	z-index: 1;
+}
+.col.active{
+	left: 0;
+	width: 100%;
+	z-index: 2;
+	transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.col.inactive{
+	opacity: 0;
+	transform: scale(0.8);
+}
+.col.changebg{
+	background-color: #000;
 }
 .col > h3{
 	color: #fff;
@@ -112,16 +125,6 @@ body{
 	transform: scale(2) skew(-30.5deg);
 	background-color: rgba(255,255,255,0.15);
 }
-.col.active{
-	left: 0;
-	width: 100%;
-	z-index: 2;
-	transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-}
-.col.inactive{
-	opacity: 0;
-	transform: scale(0.8);
-}
 .close,.gotogithub{
 	position: fixed;
 	display: block;
@@ -153,7 +156,6 @@ body{
 	text-shadow: 1px 1px 0 #333;
 	display: none;
 	overflow: hidden;
-	outline: 2px solid rgba(255,255,255,0.2);
 	transform-origin: center center;
 }
 .col-content:before{
@@ -207,7 +209,6 @@ body{
 	width: 100vw;
 	height: 100vh;
 	transform: scale(0.6);
-	outline: 2px solid rgba(255,255,255,0.2);
 }
 .col1 iframe{
 	background-color: #224b70;
