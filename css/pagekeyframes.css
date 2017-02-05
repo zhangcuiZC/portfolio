@@ -20,9 +20,9 @@
 }
 
 .col iframe.changelg{
-	animation: iframechangelg 0.5s ease-out forwards 0.5s;
-	-webkit-animation: iframechangelg 0.5s ease-out forwards 0.5s;
-	-moz-animation: iframechangelg 0.5s ease-out forwards 0.5s;
+	animation: iframechangelg 0.5s ease-out forwards 0.3s;
+	-webkit-animation: iframechangelg 0.5s ease-out forwards 0.3s;
+	-moz-animation: iframechangelg 0.5s ease-out forwards 0.3s;
 }
 @keyframes iframechangelg{
 	50%{top: 0;}
