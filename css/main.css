@@ -154,6 +154,7 @@ body{
 	display: none;
 	overflow: hidden;
 	outline: 2px solid rgba(255,255,255,0.2);
+	transform-origin: center center;
 }
 .col-content:before{
 	position: absolute;
@@ -165,12 +166,6 @@ body{
 	z-index: 0;
 	background-color: rgba(0,0,0,0.05);
 	transform: rotate(-45deg) scale(1.8);
-	transition: all 0.4s;	
-}
-.col-content.changesm{
-	transform: scale(0.6);
-	transform-origin: center center;
-	transition: transform 0.2s;
 }
 .col-content>*{
 	position: relative;
@@ -208,17 +203,32 @@ body{
 }
 .col iframe{
 	position: absolute;
-	top: 0;
+	top: 100vh;
 	width: 100vw;
 	height: 100vh;
-	transform: scale(0.5);
-	opacity: 0;
+	transform: scale(0.6);
 	outline: 2px solid rgba(255,255,255,0.2);
 }
-.col iframe.changelg{
-	transform: scale(1);
-	opacity: 1;
-	transition: all 0.4s;
+.col1 iframe{
+	background-color: #224b70;
+}
+.col2 iframe{
+	background-color: #0099db;
+}
+.col3 iframe{
+	background-color: #5cb6b6;
+}
+.col4 iframe{
+	background-color: #e69328;
+}
+.col5 iframe{
+	background-color: #f25a5a;
+}
+.col6 iframe{
+	background-color: #e74747;
+}
+.col7 iframe{
+	background-color: #854778;
 }
 .copy{
 	position: fixed;

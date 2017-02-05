@@ -19,8 +19,6 @@ p#start{
     z-index: 1;
     -webkit-animation: intro 1s ease-out;
     -moz-animation: intro 1s ease-out;
-    -ms-animation: intro 1s ease-out;
-    -o-animation: intro 1s ease-out;
     animation: intro 1s ease-out;
 }
 
@@ -31,18 +29,6 @@ p#start{
 }
 
 @-moz-keyframes intro {
-    0% { opacity: 1; }
-    90% { opacity: 1; }
-    100% { opacity: 0; }
-}
-
-@-ms-keyframes intro {
-    0% { opacity: 1; }
-    90% { opacity: 1; }
-    100% { opacity: 0; }
-}
-
-@-o-keyframes intro {
     0% { opacity: 1; }
     90% { opacity: 1; }
     100% { opacity: 0; }
@@ -70,8 +56,6 @@ p#start{
     z-index: 1;
     -webkit-animation: logo 2s ease-out 1.5s;
     -moz-animation: logo 2s ease-out 1.5s;
-    -ms-animation: logo 2s ease-out 1.5s;
-    -o-animation: logo 2s ease-out 1.5s;
     animation: logo 2s ease-out 1.5s;
 }
 
@@ -92,18 +76,6 @@ p#start{
     0% { -moz-transform: scale(1); opacity: 1; }
     50% { opacity: 1; }
     100% { -moz-transform: scale(0.1); opacity: 0; }
-}
-
-@-ms-keyframes logo {
-    0% { -ms-transform: scale(1); opacity: 1; }
-    50% { opacity: 1; }
-    100% { -ms-transform: scale(0.1); opacity: 0; }
-}
-
-@-o-keyframes logo {
-    0% { -o-transform: scale(1); opacity: 1; }
-    50% { opacity: 1; }
-    100% { -o-transform: scale(0.1); opacity: 0; }
 }
 
 @keyframes logo {
@@ -135,21 +107,6 @@ p#start{
     transform: perspective(300px) rotateX(25deg);
 }
 
-#titles:after{
-    position: absolute;
-    content: ' ';
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 60%;
-    background-image: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-    background-image: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-    background-image: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-    background-image: -o-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-    background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-    pointer-events: none;
-}
-
 #titles p{
     text-align: justify;
     margin: 0.8em 0;
@@ -164,8 +121,6 @@ p#start{
     top: 100%;
     -webkit-animation: scroll 50s linear 4s infinite;
     -moz-animation: scroll 50s linear 4s infinite;
-    -ms-animation: scroll 50s linear 4s infinite;
-    -o-animation: scroll 50s linear 4s infinite;
     animation: scroll 50s linear 4s infinite;
 }
 
@@ -176,16 +131,6 @@ p#start{
 }
 
 @-moz-keyframes scroll {
-    0% { top: 100%; }
-    100% { top: -100%; }
-}
-
-@-ms-keyframes scroll {
-    0% { top: 100%; }
-    100% { top: -100%; }
-}
-
-@-o-keyframes scroll {
     0% { top: 100%; }
     100% { top: -100%; }
 }

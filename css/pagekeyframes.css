@@ -1,0 +1,41 @@
+.col-content.changesm{
+	animation: contentchangesm 0.5s ease-out forwards;
+	-webkit-animation: contentchangesm 0.5s ease-out forwards;
+	-moz-animation: contentchangesm 0.5s ease-out forwards;
+}
+@keyframes contentchangesm{
+	33%{transform: scale(0.8);}
+	66%{transform: scale(0.8);}
+	100%{transform: scale(0.8);top: -100vh;}
+}
+@-webkit-keyframes contentchangesm{
+	33%{transform: scale(0.8);}
+	66%{transform: scale(0.8);}
+	100%{transform: scale(0.8);top: -100vh;}
+}
+@-moz-keyframes contentchangesm{
+	33%{transform: scale(0.8);}
+	66%{transform: scale(0.8);}
+	100%{transform: scale(0.8);top: -100vh;}
+}
+
+.col iframe.changelg{
+	animation: iframechangelg 0.5s ease-out forwards 0.5s;
+	-webkit-animation: iframechangelg 0.5s ease-out forwards 0.5s;
+	-moz-animation: iframechangelg 0.5s ease-out forwards 0.5s;
+}
+@keyframes iframechangelg{
+	50%{top: 0;}
+	66%{top: 0;}
+	100%{top:0;transform: scale(1);}
+}
+@-webkit-keyframes iframechangelg{
+	50%{top: 0;}
+	66%{top: 0;}
+	100%{top:0;transform: scale(1);}
+}
+@-moz-keyframes iframechangelg{
+	50%{top: 0;}
+	66%{top: 0;}
+	100%{top:0;transform: scale(1);}
+}
