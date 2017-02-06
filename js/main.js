@@ -3,6 +3,10 @@ $(function(){
 		$close=$(".close"),
 		$gotogithub=$(".gotogithub"),
 		$detail=$(".detail"),
+		$icon=$(".topbar-icon"),
+		$main=$(".main"),
+		$leftbar=$(".leftbar"),
+		$shadelayer=$(".shadelayer"),
 		title="",
 		self=null,
 		iframe=null,
@@ -29,14 +33,17 @@ $(function(){
 			"https://github.com/zhangcuiZC/loading-dots"
 			];
 
+	// 加载样式
 	$col.each(function(index, el) {
 		$(this).animate({top:"0"}, 100+index*150);
 	});
+
+	// 柱状图展开事件
 	$col.click(function(event) {
 		if(flag){
 			self=$(this);
 			idx=self.index();
-			self.addClass('active changebg').siblings('.col').addClass('inactive');
+			self.addClass('active').siblings('.col').addClass('inactive');
 			$close.fadeIn();
 			self.find('.col-content').css('top', '0').show().find('.col-img').addClass('active');
 			title=self.find('.col-h1 h1').text();
@@ -79,10 +86,11 @@ $(function(){
 		}
 	});
 
+	// 点击关闭按钮
 	$close.click(function(event) {
 		event.stopPropagation();
 		if(!flag){
-			self.removeClass('active changebg').siblings('.col').removeClass('inactive');
+			self.removeClass('active').siblings('.col').removeClass('inactive');
 			$close.fadeOut();
 			$gotogithub.fadeOut();
 			self.find('.col-content').removeClass("changesm").fadeOut().siblings('iframe').removeClass('changelg');
@@ -107,6 +115,7 @@ $(function(){
 		}
 	});
 
+	// 点击查看详情按钮
 	$detail.click(function(event) {
 		event.stopPropagation();
 		$gotogithub.attr('href', hrefarr[idx]).fadeIn();
@@ -121,7 +130,7 @@ $(function(){
 				$(".loading").fadeIn();
 				var iframetimer=setTimeout(function(){
 					iframe.attr('src', srcarr[idx]);
-				},1000);
+				},800);
 				iframe.on('load', function(event) {
 					event.preventDefault();
 					$(".loading").fadeOut();
@@ -132,5 +141,18 @@ $(function(){
 				thiscontent.siblings('iframe').addClass('changelg');
 			}
 		}
+	});
+
+	// 以下：展开/关闭侧边栏
+	$icon.click(function(event) {
+		$main.toggleClass('active');
+		$leftbar.toggleClass('active');
+		$shadelayer.toggleClass('active');
+	});
+
+	$shadelayer.click(function(event) {
+		$main.toggleClass('active');
+		$leftbar.toggleClass('active');
+		$shadelayer.toggleClass('active');
 	});
 });
