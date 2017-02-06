@@ -6,6 +6,7 @@ $(function(){
 		$icon=$(".topbar-icon"),
 		$main=$(".main"),
 		$leftbar=$(".leftbar"),
+		$topbar=$(".topbar"),
 		$shadelayer=$(".shadelayer"),
 		title="",
 		self=null,
@@ -48,6 +49,7 @@ $(function(){
 			self.find('.col-content').css('top', '0').show().find('.col-img').addClass('active');
 			title=self.find('.col-h1 h1').text();
 			self.find('.col-title').text("");
+			$topbar.toggleClass('inactive');
 			flag=false;
 
 			if(self.index()===2){
@@ -93,6 +95,8 @@ $(function(){
 			self.removeClass('active').siblings('.col').removeClass('inactive');
 			$close.fadeOut();
 			$gotogithub.fadeOut();
+			$(".loading").fadeOut();
+			$topbar.toggleClass('inactive');
 			self.find('.col-content').removeClass("changesm").fadeOut().siblings('iframe').removeClass('changelg');
 			self.find('.col-img').removeClass('active');
 			self.find('.col-title').text(title);
