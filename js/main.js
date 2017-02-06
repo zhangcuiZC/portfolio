@@ -40,7 +40,7 @@ $(function(){
 			$close.fadeIn();
 			self.find('.col-content').css('top', '0').show().find('.col-img').addClass('active');
 			title=self.find('.col-h1 h1').text();
-			self.find('.col-title').text('正在打开"'+title+'"');
+			self.find('.col-title').text("");
 			flag=false;
 
 			if(self.index()===2){
@@ -118,9 +118,14 @@ $(function(){
 			thiscontent.parents(".col").append(iframe);
 			if(!flag){
 				iframe.addClass('changelg');
+				$(".loading").fadeIn();
 				var iframetimer=setTimeout(function(){
 					iframe.attr('src', srcarr[idx]);
 				},1000);
+				iframe.on('load', function(event) {
+					event.preventDefault();
+					$(".loading").fadeOut();
+				});
 			}
 		}else{
 			if(!flag){

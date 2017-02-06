@@ -240,7 +240,14 @@ body{
 	z-index: 999;
 	text-shadow: 1px 1px 0px #333;
 }
-
+.loading{
+	display: none;
+	position: relative;
+	text-align: center;
+	color: rgba(255,255,255,0.5);
+	z-index: 3;
+	margin-top: 15%;
+}
 
 
 
