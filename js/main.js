@@ -11,6 +11,7 @@ $(function(){
 		title="",
 		self=null,
 		iframe=null,
+		iframearr=[],
 		imgs=null,
 		idx,
 		flag=true,
@@ -53,28 +54,24 @@ $(function(){
 			flag=false;
 
 			if(self.index()===2){
-				self.find('.col3-img1').delay(300).animate({left: "10vw", top: "10vh"}, 300, function(){
-					$(this).addClass('active');
-					$(this).siblings('.col3-img2').delay(300).animate({left: "5vw", top: "40vh"}, 300, function(){
-						$(this).addClass('active');
-						var count=self.find('.col3-count span');
-						count.each(function(index, el) {
-							var countnum=parseInt($(this).attr('data-num'));
-							var num=1;
-							var counttimer=setInterval(function(){
-								$(el).text(num);
-								if(num<countnum-20){
-									num+=3;
-								}else{
-									num++;
-								}
-								if(num===countnum+1){
-									clearInterval(counttimer);
-								}
-							},60);
-						});
-					})
-				})
+				self.find('.col3-img1').addClass('active').siblings('.col3-img2').addClass('active');
+
+				var count=self.find('.col3-count span');
+				count.each(function(index, el) {
+					var countnum=parseInt($(this).attr('data-num'));
+					var num=1;
+					var counttimer=setInterval(function(){
+						$(el).text(num);
+						if(num<countnum-20){
+							num+=5;
+						}else{
+							num++;
+						}
+						if(num===countnum+1){
+							clearInterval(counttimer);
+						}
+					},50);
+				});
 			}
 
 			if(self.index()===5){
@@ -97,13 +94,13 @@ $(function(){
 			$gotogithub.fadeOut();
 			$(".loading").fadeOut();
 			$topbar.toggleClass('inactive');
-			self.find('.col-content').removeClass("changesm").fadeOut().siblings('iframe').removeClass('changelg');
+			self.find('.col-content').removeClass("changesm").hide().siblings('iframe').removeClass('changelg');
 			self.find('.col-img').removeClass('active');
 			self.find('.col-title').text(title);
 			flag=true;
 
 			if(self.index()===2){
-				self.find('.col3-img1').stop(true).css({left: "80vw", top: "80vh"}).removeClass('active').siblings('.col3-img2').stop(true).removeClass('active').css({left: "0", top: "100vh"});
+				self.find('.col3-img1').removeClass('active').siblings('.col3-img2').removeClass('active');
 				self.find('.col3-count span').text("");
 			}
 
@@ -137,7 +134,7 @@ $(function(){
 					iframe.on('load', function(event) {
 						$(".loading").fadeOut();
 					});
-				},800);
+				},500);
 			}
 		}else{
 			if(!flag){
@@ -154,8 +151,8 @@ $(function(){
 	});
 
 	$shadelayer.click(function(event) {
-		$main.toggleClass('active');
-		$leftbar.toggleClass('active');
-		$shadelayer.toggleClass('active');
+		$main.removeClass('active');
+		$leftbar.removeClass('active');
+		$shadelayer.removeClass('active');
 	});
 });

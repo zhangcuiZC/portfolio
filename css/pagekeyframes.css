@@ -1,41 +1,29 @@
 .col-content.changesm{
-	animation: contentchangesm 0.3s ease-in forwards;
-	-webkit-animation: contentchangesm 0.3s ease-in forwards;
-	-moz-animation: contentchangesm 0.3s ease-in forwards;
+	animation: contentchangesm 0.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+	-webkit-animation: contentchangesm 0.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+	-moz-animation: contentchangesm 0.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
 @keyframes contentchangesm{
-	33%{transform: scale(0.8);}
-	66%{transform: scale(0.8);}
-	100%{transform: scale(0.8);top: -100vh;}
+	100%{transform: scale(0.6);opacity: 0}
 }
 @-webkit-keyframes contentchangesm{
-	33%{transform: scale(0.8);}
-	66%{transform: scale(0.8);}
-	100%{transform: scale(0.8);top: -100vh;}
+	100%{transform: scale(0.6);opacity: 0}
 }
 @-moz-keyframes contentchangesm{
-	33%{transform: scale(0.8);}
-	66%{transform: scale(0.8);}
-	100%{transform: scale(0.8);top: -100vh;}
+	100%{transform: scale(0.6);opacity: 0}
 }
 
 .col iframe.changelg{
-	animation: iframechangelg 0.5s ease-out forwards 0.3s;
-	-webkit-animation: iframechangelg 0.5s ease-out forwards 0.3s;
-	-moz-animation: iframechangelg 0.5s ease-out forwards 0.3s;
+	animation: iframechangelg 0.5s cubic-bezier(0.23, 1, 0.32, 1) forwards 0.2s;
+	-webkit-animation: iframechangelg 0.5s cubic-bezier(0.23, 1, 0.32, 1) forwards 0.2s;
+	-moz-animation: iframechangelg 0.5s cubic-bezier(0.23, 1, 0.32, 1) forwards 0.2s;
 }
 @keyframes iframechangelg{
-	50%{top: 0;}
-	66%{top: 0;}
-	100%{top:0;transform: scale(1);}
+	100%{opacity:1;transform: scale(1);}
 }
 @-webkit-keyframes iframechangelg{
-	50%{top: 0;}
-	66%{top: 0;}
-	100%{top:0;transform: scale(1);}
+	100%{opacity:1;transform: scale(1);}
 }
 @-moz-keyframes iframechangelg{
-	50%{top: 0;}
-	66%{top: 0;}
-	100%{top:0;transform: scale(1);}
+	100%{opacity:1;transform: scale(1);}
 }
