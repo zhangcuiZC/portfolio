@@ -80,7 +80,7 @@ $(function(){
 					self.find('.col6-rightbottom-item').each(function(index, el) {
 						$(el).addClass('item'+(index+1));
 					});
-				},1000);
+				},800);
 			}
 		}
 	});

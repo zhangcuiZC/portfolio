@@ -5,9 +5,9 @@
 	opacity: 0;
 }
 .col3-img1.active{
-	animation: col3img1 0.8s ease-out forwards;
-	-webkit-animation: col3img1 0.8s ease-out forwards;
-	-moz-animation: col3img1 0.8s ease-out forwards;
+	animation: col3img1 0.8s ease-out forwards 0.2s;
+	-webkit-animation: col3img1 0.8s ease-out forwards 0.2s;
+	-moz-animation: col3img1 0.8s ease-out forwards 0.2s;
 }
 @keyframes col3img1{
 	40%{left: 10vw;top: 10vh;opacity: 1;transform: scale(1) rotateZ(-5deg);}
