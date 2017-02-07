@@ -588,7 +588,7 @@ a{
 	flex-direction: column;
 	justify-content: space-between;
 	color: #fff;
-	background: url(../img/col5-bg.jpg) center no-repeat;
+	background: #fe5e5e url(../img/col5-bg.jpg) center no-repeat;
 	background-size: cover;
 }
 .col5 .col-h1 h1{
@@ -759,7 +759,7 @@ a{
 /*---------------col7 flex----------*/
 .col7 .col-content{
 	color: #fff;
-	background: url(../img/col7-bg.jpg) center no-repeat;
+	background: #000 url(../img/col7-bg.jpg) center no-repeat;
 	background-size: cover;
 	display: none;
 	text-shadow: none;
