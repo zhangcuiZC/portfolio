@@ -134,11 +134,10 @@ $(function(){
 				$(".loading").fadeIn();
 				var iframetimer=setTimeout(function(){
 					iframe.attr('src', srcarr[idx]);
+					iframe.on('load', function(event) {
+						$(".loading").fadeOut();
+					});
 				},800);
-				iframe.on('load', function(event) {
-					event.preventDefault();
-					$(".loading").fadeOut();
-				});
 			}
 		}else{
 			if(!flag){

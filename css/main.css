@@ -112,6 +112,7 @@ a{
 }
 .leftbar .copy{
 	font-size: 12px;
+	line-height: 2em;
 	position: relative;
 	bottom: -10vh;
 	width: 100%;
