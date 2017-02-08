@@ -40,6 +40,8 @@ $(function(){
 		$(this).animate({top:"0"}, 100+index*150);
 	});
 
+	$(".col-content").hide().css('top', '0');
+
 	// 柱状图展开事件
 	$col.click(function(event) {
 		if(flag){
@@ -47,7 +49,7 @@ $(function(){
 			idx=self.index();
 			self.addClass('active').siblings('.col').addClass('inactive');
 			$close.fadeIn();
-			self.find('.col-content').css('top', '0').show().find('.col-img').addClass('active');
+			self.find('.col-content').fadeIn().find('.col-img').addClass('active');
 			title=self.find('.col-h1 h1').text();
 			self.find('.col-title').text("");
 			$topbar.toggleClass('inactive');

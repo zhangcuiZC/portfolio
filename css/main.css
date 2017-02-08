@@ -249,9 +249,10 @@ a{
 /*柱状图展开后的内容区*/
 .col-content{
 	position: absolute;
-	padding:10vh 10%;
+	padding:10vh 10vw;
 	left: 0 !important;
-	right: 0;
+	/*right: 0;*/
+	width: 80vw;
 	height: 80vh;
 	cursor: auto;
 	color: #fff;
