@@ -8,6 +8,7 @@ $(function(){
 		$leftbar=$(".leftbar"),
 		$topbar=$(".topbar"),
 		$shadelayer=$(".shadelayer"),
+		$loading=$(".loading"),
 		title="",
 		self=null,
 		iframe=null,
@@ -49,11 +50,15 @@ $(function(){
 			idx=self.index();
 			self.addClass('active').siblings('.col').addClass('inactive');
 			$close.fadeIn();
-			self.find('.col-content').fadeIn().find('.col-img').addClass('active');
-			title=self.find('.col-h1 h1').text();
+			self.find('.col-content').show();
+			title=self.find('.col-title').text();
 			self.find('.col-title').text("");
 			$topbar.toggleClass('inactive');
 			flag=false;
+
+			if(idx===1){
+				self.find('.col2-img').addClass('active');
+			}
 
 			if(self.index()===2){
 				self.find('.col3-img1').addClass('active').siblings('.col3-img2').addClass('active');
@@ -94,12 +99,15 @@ $(function(){
 			self.removeClass('active').siblings('.col').removeClass('inactive');
 			$close.fadeOut();
 			$gotogithub.fadeOut();
-			$(".loading").fadeOut();
+			$loading.fadeOut();
 			$topbar.toggleClass('inactive');
 			self.find('.col-content').removeClass("changesm").hide().siblings('iframe').removeClass('changelg');
-			self.find('.col-img').removeClass('active');
 			self.find('.col-title').text(title);
 			flag=true;
+
+			if(idx===1){
+				self.find('.col2-img').removeClass('active');
+			}
 
 			if(self.index()===2){
 				self.find('.col3-img1').removeClass('active').siblings('.col3-img2').removeClass('active');
@@ -134,7 +142,7 @@ $(function(){
 				var iframetimer=setTimeout(function(){
 					iframe.attr('src', srcarr[idx]);
 					iframe.on('load', function(event) {
-						$(".loading").fadeOut();
+						$loading.fadeOut();
 					});
 				},500);
 			}
@@ -147,13 +155,13 @@ $(function(){
 
 	// 以下：展开/关闭侧边栏
 	$icon.click(function(event) {
-		$main.toggleClass('active');
+		$main.toggleClass('active').siblings('.topbar').toggleClass('short').find('p').toggle();
 		$leftbar.toggleClass('active');
 		$shadelayer.toggleClass('active');
 	});
 
 	$shadelayer.click(function(event) {
-		$main.removeClass('active');
+		$main.removeClass('active').siblings('.topbar').removeClass('short').find('p').show();
 		$leftbar.removeClass('active');
 		$shadelayer.removeClass('active');
 	});
