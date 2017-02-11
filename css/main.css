@@ -332,25 +332,25 @@ a{
 	opacity: 0;
 }
 .col1 iframe{
-	background-color: #224b70;
+	background-color: #E62739;
 }
 .col2 iframe{
-	background-color: #0099db;
+	background-color: #FF5A09;
 }
 .col3 iframe{
-	background-color: #5cb6b6;
+	background-color: #FFFC31;
 }
 .col4 iframe{
-	background-color: #e69328;
+	background-color: #31B96E;
 }
 .col5 iframe{
-	background-color: #f25a5a;
+	background-color: #79BEDB;
 }
 .col6 iframe{
-	background-color: #e74747;
+	background-color: #005B9A;
 }
 .col7 iframe{
-	background-color: #854778;
+	background-color: #660066;
 }
 /*iframe的loading*/
 .loading{
@@ -478,6 +478,11 @@ a{
 .col3 .col-content{
 	display: flex;
 	justify-content: space-between;
+	color: #000;
+	text-shadow: none;
+}
+.col3 .col-content:before{
+	background-color: rgba(0,0,0,0.1);
 }
 .col3 .col-h1{
 	flex: 1;
@@ -485,6 +490,9 @@ a{
 	flex-direction: column;
 	justify-content: space-between;
 	z-index: 2;
+}
+.col3 .col-h1 h1:before{
+	background-color: rgba(0,0,0,0.2);
 }
 .col3-leftinfo{
 	font-size: 12px;
@@ -502,8 +510,8 @@ a{
 	position: relative;
 	display: flex;
 	flex-direction: column-reverse;
-	border-top: 4px solid rgba(255,255,255,0.2);
-	border-left: 4px solid rgba(255,255,255,0.2);
+	border-top: 4px solid rgba(0,0,0,0.2);
+	border-left: 4px solid rgba(0,0,0,0.2);
 }
 .col3-rightinfo img{
 	padding: 7px;
@@ -515,7 +523,7 @@ a{
 	height: 50px;
 	font-size: 16px;
 	font-weight: lighter;
-	background: linear-gradient(to right,rgba(255,255,255,0.2),transparent);
+	background: linear-gradient(to right,rgba(0,0,0,0.2),transparent);
 	display: flex;
 	align-items: center;
 	z-index: 2;
@@ -527,7 +535,7 @@ a{
 	font-weight: bold;
 }
 .col3-detail{
-	background-color: rgba(255,255,255,0.2);
+	text-shadow: none;
 }
 /*-------------col4 flex-----------------*/
 .col4 .col-content{
@@ -588,9 +596,8 @@ a{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	color: #fff;
-	background: #fe5e5e url(../img/col5-bg.jpg) center no-repeat;
-	background-size: cover;
+	color: #00303F;
+	text-shadow: none;
 }
 .col5 .col-h1 h1{
 	font-size: 72px;
@@ -638,6 +645,8 @@ a{
 .col5-detail{
 	width: 20vw;
 	min-width: 200px;
+	text-shadow: none;
+	background-color: rgba(0,0,0,0.1);
 }
 .col5-next{
 	display: flex;
@@ -696,8 +705,8 @@ a{
 	text-shadow: none;
 }
 .col6-fire.active{
-	color: #ff7;
-	text-shadow: 0 0 200px #ff6;
+	color: #EF7030;
+	text-shadow: 0 0 200px #EF7030;
 	transition: all 1.5s;
 }
 .col6-right{
@@ -735,13 +744,16 @@ a{
 	position: relative;
 }
 .col6-rightbottom-item.item1{
-	background-color: #fbffb9;
+	background-color: #EF7030;
 }
 .col6-rightbottom-item.item2{
-	background-color: #FDD692;
+	background-color: #F48B31;
 }
 .col6-rightbottom-item.item3{
-	background-color: #EC7357;
+	background-color: #FBB731;
+}
+.col6-rightbottom-item.item4{
+	background-color: #E9DC85;
 }
 .col6-detail{
 	position: absolute;
