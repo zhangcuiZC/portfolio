@@ -161,6 +161,7 @@ a{
 	overflow: hidden;
 	transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 	z-index: 1;
+	box-shadow: 0 0 50px rgba(0,0,0,0.6);
 }
 /*柱状图激活*/
 .col.active{
@@ -183,6 +184,7 @@ a{
 	font-weight: normal;
 	transform: scale(1);
 	transition: transform 0.4s;
+	text-shadow: 0 0 5px #000;
 }
 .col:hover > h3{
 	transform: scale(2);
@@ -191,37 +193,37 @@ a{
 .col1,.col1 .col-content{
 	top: -120vh;
 	left: 0;
-	background-color: #244F75;
+	background-color: #E62739;
 }
 .col2,.col2 .col-content{
 	top: 120vh;
 	left: 14.28%;
-	background-color: #00a0e6;
+	background-color: #FF5A09;
 }
 .col3,.col3 .col-content{
 	top: -120vh;
 	left: 28.56%;
-	background-color: #60BFBF;
+	background-color: #FFFC31;
 }
 .col4,.col4 .col-content{/*轮播插件*/
 	top: 120vh;
 	left: 42.84%;
-	background-color: #f19a2a;
+	background-color: #31B96E;
 }
 .col5,.col5 .col-content{/*AJAX项目*/
 	top: -120vh;
 	left: 57.12%;
-	background-color: #fe5e5e;
+	background-color: #79BEDB;
 }
 .col6,.col6 .col-content{/*FCC项目*/
 	top: 120vh;
 	left: 71.4%;
-	background-color: #F24B4B;
+	background-color: #005B9A;
 }
 .col7,.col7 .col-content{/*其他项目*/
 	top: -120vh;
 	left: 85.68%;
-	background-color: #8C4B7E;
+	background-color: #660066;
 }
 /*柱状图遮罩*/
 .col:before{
