@@ -551,7 +551,7 @@ $(function(){
 			}catch(e){
 				$("input[name='item1result']").val("请输入正确的数组");
 				return;
-			};
+			}
 			if(Array.isArray(arr1)){
 				var result=steamroller(arr1);
 				$("input[name='item1result']").val("["+result+"]");
@@ -565,7 +565,7 @@ $(function(){
 			}catch(e){
 				$("input[name='item2result']").val("请输入正确的数组");
 				return;
-			};
+			}
 			if(arr2.every(function(val){return Array.isArray(val);})){
 				var result=sym(arr2);
 				$("input[name='item2result']").val("["+result+"]");
@@ -581,7 +581,7 @@ $(function(){
 			}catch(e){
 				$("input[name='item3result']").val("请输入正确的数组");
 				return;
-			};
+			}
 			if(Array.isArray(arr3)&&arr3.every(function(val){return parseInt(val)===val;})&&arr3.length===2&&arr3[0]<arr3[1]){
 				var result=smallestCommons(arr3);
 				$("input[name='item3result']").val(result);

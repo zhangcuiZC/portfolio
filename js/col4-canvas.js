@@ -6,7 +6,7 @@ $(function(){
 		timer=setTimeout(function(){
 			$(col4cvs).width(parseInt($(window).height())/7*8);
 		},200);
-	}
+	};
 	$(window).trigger('resize');
 	
 	if(col4cvs.getContext){
@@ -33,15 +33,5 @@ $(function(){
 		context.moveTo(850,150);
 		context.lineTo(450,750);
 		context.stroke();
-
-		// context.fillStyle="#ffffff";
-		// context.font="16px 'microsoft yahei'";
-		// context.textAlign="center";
-		// context.textBaseline="middle";
-		// context.fillText("jquery.slideshow.js",300,130);
-		// context.fillText("方式一：无差别滑动轮播",300,170);
-		// context.fillText("jquery.slideshowfadein.js",150,430);
-		// context.fillText("方式二：淡入淡出轮播",150,470);
-		// context.fillText("……",450,650);
 	}
 });
