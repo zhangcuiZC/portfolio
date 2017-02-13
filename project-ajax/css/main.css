@@ -94,7 +94,7 @@ body>h3{
 	width: 500px;
 	height: 300px;
 	margin: 0 auto;
-	background: #f77 url(../img/weather-bg.jpg) no-repeat center;
+	background: #fff url(../img/weather-bg.jpg) no-repeat center;
 	-webkit-background-size: cover;
 	background-size: cover;
 }
