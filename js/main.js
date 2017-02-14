@@ -36,17 +36,9 @@ $(function(){
 			"https://github.com/zhangcuiZC/loading-dots"
 			];
 
-	// 加载样式
-	$col.each(function(index, el) {
-		$(this).animate({top:"0"}, 100+index*150);
-	});
-
-	$(".col-content").hide().css('top', '0');
-
-	// 柱状图展开事件
-	$col.click(function(event) {
+	function colexpand(element){
 		if(flag){
-			self=$(this);
+			self=$(element);
 			idx=self.index();
 			self.addClass('active').siblings('.col').addClass('inactive');
 			$close.fadeIn();
@@ -90,11 +82,9 @@ $(function(){
 				},800);
 			}
 		}
-	});
+	}
 
-	// 点击关闭按钮
-	$close.click(function(event) {
-		event.stopPropagation();
+	function colclose(){
 		if(!flag){
 			self.removeClass('active').siblings('.col').removeClass('inactive');
 			$close.fadeOut();
@@ -124,13 +114,11 @@ $(function(){
 				});
 			}
 		}
-	});
+	}
 
-	// 点击查看详情按钮
-	$detail.click(function(event) {
-		event.stopPropagation();
+	function showiframe(element){
 		$gotogithub.attr('href', hrefarr[idx]).fadeIn();
-		var thiscontent=$(this).parents(".col-content");
+		var thiscontent=$(element).parents(".col-content");
 
 		thiscontent.addClass("changesm");
 		if(!thiscontent.siblings('iframe').length){
@@ -151,6 +139,30 @@ $(function(){
 				thiscontent.siblings('iframe').addClass('changelg');
 			}
 		}
+	}
+
+	// 加载样式
+	$col.each(function(index, el) {
+		$(this).animate({top:"0"}, 100+index*150);
+	});
+
+	$(".col-content").hide().css('top', '0');
+
+	// 柱状图展开事件
+	$col.click(function() {
+		colexpand(this);
+	});
+
+	// 点击关闭按钮
+	$close.click(function(event) {
+		event.stopPropagation();
+		colclose();
+	});
+
+	// 点击查看详情按钮
+	$detail.click(function(event) {
+		event.stopPropagation();
+		showiframe(this);
 	});
 
 	// 以下：展开/关闭侧边栏
