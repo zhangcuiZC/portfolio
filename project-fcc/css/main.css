@@ -12,7 +12,7 @@ body>h3{
 	text-shadow: 1px 1px 0 #333;
 	text-align: center;
 }
-.projectclock,.projectcalculator,.projectdanmu,.projectcash,.projectalgo{
+.projectclock,.projectcalculator,.projectdanmu,.projectcash,.projectalgo,.projectsimon{
 	position: relative;
 	color: #eee;
 	width: 100%;
@@ -354,6 +354,199 @@ body>h3{
 	border: none;
 	padding: 0 10px;
 }
+/*--------------------*/
+.simon{
+	position: relative;
+	width: 400px;
+	height: 400px;
+	background-color: #fff;
+	border: 20px solid #333;
+	margin: 5% auto;
+	border-radius: 50%;
+	overflow: hidden;
+	color: #000;
+}
+.simon-item{
+	position: relative;
+	box-sizing: border-box;
+	width: 200px;
+	height: 200px;
+	float: left;
+	border: 10px solid #333;
+}
+.simon-item1{
+	background-color: #00a74a;
+	border-left: none;
+	border-top: none;
+}
+.simon-item2{
+	background-color: #9f0f17;
+	border-right: none;
+	border-top: none;
+}
+.simon-item3{
+	background-color: #cca707;
+	border-left: none;
+	border-bottom: none;
+}
+.simon-item4{
+	background-color: #094a8f;
+	border-right: none;
+	border-bottom: none;
+}
+.simon-control{
+	box-sizing: border-box;
+	width: 240px;
+	height: 240px;
+	border: 10px solid #333;
+	border-radius: 50%;
+	background-color: #fff;
+	position: absolute;
+	left: 50%;
+	margin-left: -120px;
+	top: 50%;
+	margin-top: -120px;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+.simon-control-title{
+	text-align: center;
+	padding-top: 30px;
+}
+.simon-control-btn{
+	height: 60px;
+	text-align: center;
+	font-size: 12px;
+	line-height: 20px;
+	margin-top: 20px;
+}
+.simon-control-btn .leftpart{
+	display: inline-block;
+	margin: 0 5px;
+	width: 60px;
+}
+.simon-control-btn .leftpart .countbox{
+	box-sizing: border-box;
+	width: 60px;
+	height: 40px;
+	line-height: 34px;
+	background-color: #32050c;
+	color: rgba(255,0,0,0.3);
+	font-size: 18px;
+	border: 3px solid #333;
+	border-radius: 10px;
+}
+.simon-control-btn .middlepart{
+	display: inline-block;
+	margin: 0 5px;
+	width: 40px;
+}
+.simon-control-btn .middlepart .startbtn{
+	box-sizing: border-box;
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background-color: red;
+	border: 3px solid #333;
+	border-radius: 50%;
+	box-shadow: 0 1px 4px #333;
+	margin-bottom: 3px;
+	cursor: pointer;
+}
+.simon-control-btn .rightpart{
+	position: relative;
+	display: inline-block;
+	margin: 0 5px;
+	width: 40px;
+}
+.simon-control-btn .rightpart .strictbtn{
+	box-sizing: border-box;
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background-color: yellow;
+	border: 3px solid #333;
+	border-radius: 50%;
+	box-shadow: 0 1px 4px #333;
+	margin-bottom: 3px;
+	cursor: pointer;
+}
+.simon-control-btn .rightpart .stricton{
+	position: absolute;
+	box-sizing: border-box;
+	width: 10px;
+	height: 10px;
+	border: 2px solid #333;
+	background-color: #32050c;
+	border-radius: 50%;
+	left: 50%;
+	margin-left: -5px;
+	bottom: 58px;
+}
+.simon-control-switch{
+	text-align: center;
+	height: 20px;
+	font-size: 12px;
+	line-height: 20px;
+	margin-top: 20px;
+
+}
+.simon-control-switch .switchbox{
+	position: relative;
+	display: inline-block;
+	width: 38px;
+	height: 20px;
+	background-color: #333;
+	vertical-align: top;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.simon-control-switch .switch{
+	position: absolute;
+	box-sizing: border-box;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #333;
+	border-radius: 4px;
+	background-color: #41D3BD;
+	top: 0;
+	left: 0;
+}
+
+.simon-control-btn .leftpart .countnum.active{
+	color: red;
+}
+
+.simon-control-btn .middlepart .startbtn.active{
+	box-shadow: 0 1px 2px #333;
+	margin-bottom: 2px;
+}
+.simon-control-btn .rightpart .strictbtn.active{
+	box-shadow: 0 1px 2px #333;
+	margin-bottom: 2px;
+}
+.simon-control-btn .rightpart .stricton.active{
+	background-color: red;
+}
+.simon-control-switch .switch.active{
+	left: auto;
+	right: 0;
+}
+.simon-item1.active{
+	background-color: #8CD790;
+}
+.simon-item2.active{
+	background-color: #f94e3f;
+}
+.simon-item3.active{
+	background-color: #feee7d;
+}
+.simon-item4.active{
+	background-color: #30A9DE;
+}
+
 
 
 
