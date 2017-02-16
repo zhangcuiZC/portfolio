@@ -20,19 +20,19 @@ $(function(){
 		srcarr: [
 			"https://zhangcuizc.github.io/",
 			"https://zhangcuizc.github.io/jd-new",
-			"https://www.cnblogs.com/zczhangcui/",
-			"project-slideshow/index.html",
-			"project-ajax/index.html",
 			"project-fcc/index.html",
+			"https://www.cnblogs.com/zczhangcui/",
+			"project-ajax/index.html",
+			"project-slideshow/index.html",
 			"project-others/index.html"
 		],
 		hrefarr: [
 			"https://github.com/zhangcuiZC/zhangcuiZC.github.io",
 			"https://github.com/zhangcuiZC/jd-new",
+			"https://github.com/zhangcuiZC/My-FreeCodeCamp",
 			"https://www.cnblogs.com/zczhangcui/",
+			"https://github.com/zhangcuiZC/My-FreeCodeCamp",
 			"https://github.com/zhangcuiZC/slideshowzc",
-			"https://github.com/zhangcuiZC/My-FreeCodeCamp",
-			"https://github.com/zhangcuiZC/My-FreeCodeCamp",
 			"https://github.com/zhangcuiZC/loading-dots"
 		],
 
@@ -53,10 +53,10 @@ $(function(){
 					col.self.find('.col2-img').addClass('active');
 				}
 
-				if(col.self.index()===2){
-					col.self.find('.col3-img1').addClass('active').siblings('.col3-img2').addClass('active');
+				if(col.self.index()===3){
+					col.self.find('.col4-img1').addClass('active').siblings('.col4-img2').addClass('active');
 
-					var count=col.self.find('.col3-count span');
+					var count=col.self.find('.col4-count span');
 					count.each(function(index, el) {
 						var countnum=parseInt($(this).attr('data-num'));
 						var num=1;
@@ -74,10 +74,10 @@ $(function(){
 					});
 				}
 
-				if(col.self.index()===5){
+				if(col.self.index()===2){
 					col.firecolortimer=setTimeout(function(){
-						col.self.find('.col6-fire').addClass('active');
-						col.self.find('.col6-rightbottom-item').each(function(index, el) {
+						col.self.find('.col3-fire').addClass('active');
+						col.self.find('.col3-rightbottom-item').each(function(index, el) {
 							$(el).addClass('item'+(index+1));
 						});
 					},800);
@@ -101,17 +101,17 @@ $(function(){
 					col.self.find('.col2-img').removeClass('active');
 				}
 
-				if(col.self.index()===2){
-					col.self.find('.col3-img1').removeClass('active').siblings('.col3-img2').removeClass('active');
-					col.self.find('.col3-count span').text("");
+				if(col.self.index()===3){
+					col.self.find('.col4-img1').removeClass('active').siblings('.col4-img2').removeClass('active');
+					col.self.find('.col4-count span').text("");
 				}
 
-				if(col.self.index()===5){
+				if(col.self.index()===2){
 					if(col.firecolortimer){
 						clearTimeout(col.firecolortimer);
 					}
-					col.self.find('.col6-fire').removeClass('active');
-					col.self.find('.col6-rightbottom-item').each(function(index, el) {
+					col.self.find('.col3-fire').removeClass('active');
+					col.self.find('.col3-rightbottom-item').each(function(index, el) {
 						$(el).removeClass('item'+(index+1));
 					});
 				}

@@ -1,17 +1,17 @@
 $(function(){
-	var col4cvs=$("#col4-canvas")[0];
+	var col6cvs=$("#col6-canvas")[0];
 	var timer=null;
 	window.onresize=function(){
 		clearTimeout(timer);
 		timer=setTimeout(function(){
-			$(col4cvs).width(parseInt($(window).height())/7*8);
+			$(col6cvs).width(parseInt($(window).height())/7*8);
 		},200);
 	};
 	$(window).trigger('resize');
 	
-	if(col4cvs.getContext){
-		var context=col4cvs.getContext("2d");
-		context.fillStyle="#000000";
+	if(col6cvs.getContext){
+		var context=col6cvs.getContext("2d");
+		context.fillStyle="#000";
 		context.lineWidth="20";
 		context.strokeStyle="#000";
 
