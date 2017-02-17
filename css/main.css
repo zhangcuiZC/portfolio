@@ -337,7 +337,7 @@ a{
 	background-color: #FF5A09;
 }
 .col3 iframe{
-	background-color: #FFFC31;
+	background-color: #FFE74C;
 }
 .col4 iframe{
 	background-color: #31B96E;
@@ -346,7 +346,7 @@ a{
 	background-color: #79BEDB;
 }
 .col6 iframe{
-	background-color: #005B9A;
+	background-color: #30BCED;
 }
 .col7 iframe{
 	background-color: #660066;
@@ -495,6 +495,7 @@ a{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	background-color: #FFE74C;
 }
 .col3-info{
 	height: 100%;
@@ -512,7 +513,7 @@ a{
 }
 .col3-fire.active{
 	color: #EF7030;
-	text-shadow: 0 0 200px #EF7030;
+	text-shadow: 0 0 200px #DC3D24;
 	transition: all 1.5s;
 }
 .col3-right{
@@ -580,9 +581,6 @@ a{
 	justify-content: space-between;
 	color: #000;
 	text-shadow: none;
-}
-.col4 .col-content:before{
-	background-color: rgba(0,0,0,0.1);
 }
 .col4 .col-h1{
 	flex: 1;
@@ -718,10 +716,11 @@ a{
 }
 /*-------------col6 flex-----------------*/
 .col6 .col-content{
-	color: #e3dede;
+	color: #000;
 	text-shadow: none;
 	display: flex;
 	justify-content: space-between;
+	background-color: #30BCED;
 }
 .col6-info{
 	display: flex;
@@ -748,7 +747,7 @@ a{
 	left: 0;
 	top: 0;
 	content: "";
-	background-color: rgba(255,255,255,0.2);
+	background-color: rgba(0,0,0,0.2);
 }
 .col6 .fa-angle-double-down{
 	width: 400px;
