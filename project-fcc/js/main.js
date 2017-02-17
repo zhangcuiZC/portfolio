@@ -313,7 +313,7 @@ $(function(){
 				fire=danmu.getElementsByTagName('button')[0],
 				clear=danmu.querySelector(".clear"),
 				contentbox=danmu.querySelector(".contentbox"),
-				width=parseFloat(window.getComputedStyle(contentbox).width);
+				width=parseFloat(window.getComputedStyle(contentbox).width),
 				colorbox=["black","red","yellow","green","blue","gray","olive","silver","teal","lime"],
 			//  colorbox----0-------1------2-------3--------4------5------6-------7--------8------9
 				positionbox=[],
@@ -380,7 +380,7 @@ $(function(){
 	  		var needchange=cash-price;
 	  		var m=0;
 	  		var flag=1;
-	  
+	  		
 	  		for(var i=0;i<8;i++){
 	    		var num;
 	    		switch(i){
@@ -446,10 +446,15 @@ $(function(){
 			var price=$(".change-need input").val();
 			var cash=$(".change-actual input").val();
 
-			var result=checkCashRegister(price, cash, cid);
 			$(".change-right span").text("-");
-			$(".change-total").text((cash-price).toFixed(1));
+			if(cash-price<0){
+				$(".change-total").text("别想蒙我");
+				return;
+			}else{
+				$(".change-total").text((cash-price).toFixed(1));
+			}
 
+			var result=checkCashRegister(price, cash, cid);
 			if(Array.isArray(result)){
 				$(result).each(function(index, el) {
 					$("."+el[0]).text(el[1]);
