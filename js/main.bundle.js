@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 20);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10325,78 +10325,6 @@ return jQuery;
 
 /***/ }),
 /* 6 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "../img/col2-img1.jpg";
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "../img/col2-img2.jpg";
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "../img/col2-img3.jpg";
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "../img/col4-img1.jpg";
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "../img/col4-img2.jpg";
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "../img/col5-img1.jpg";
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "../img/col5-img2.jpg";
-
-/***/ }),
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "../img/col5-img3.jpg";
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "../img/col5-img4.jpg";
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "../img/fcc-cert.jpg";
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "../img/leftbar-me.jpg";
-
-/***/ }),
-/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {__webpack_require__(0);
@@ -10440,7 +10368,7 @@ module.exports = __webpack_require__.p + "../img/leftbar-me.jpg";
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 19 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {__webpack_require__(0);
@@ -10524,12 +10452,12 @@ module.exports = __webpack_require__.p + "../img/leftbar-me.jpg";
 					}
 
 					if(idx === 2) {
-						firecolortimer = setTimeout(function() {
+						// firecolortimer = setTimeout(function() {
 							self.find('.col3-fire').addClass('active');
 							self.find('.col3-rightbottom-item').each(function(index, el) {
 								$(el).addClass('item' + (index + 1));
 							});
-						}, 800);
+					// 	}, 800);
 					}
 				}
 			},
@@ -10543,7 +10471,7 @@ module.exports = __webpack_require__.p + "../img/leftbar-me.jpg";
 					$gotogithub.hide();
 					$loading.hide();
 					$topbar.toggleClass('inactive');
-					$colcontent.fadeOut().removeClass("changesm active").siblings('iframe').removeClass('changelg');
+					$colcontent.fadeOut(600).removeClass("changesm active").siblings('iframe').removeClass('changelg');
 					flag = true;
 
 					if(idx === 1) {
@@ -10650,33 +10578,33 @@ module.exports = __webpack_require__.p + "../img/leftbar-me.jpg";
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 20 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(5);
-__webpack_require__(6);
+// require('font-awesome/scss/font-awesome.scss');
 __webpack_require__(3);
 __webpack_require__(1);
 __webpack_require__(2);
 __webpack_require__(4);
-__webpack_require__(19);
-__webpack_require__(18);
-
 __webpack_require__(7);
-__webpack_require__(8);
-__webpack_require__(9);
+__webpack_require__(6);
 
-__webpack_require__(16);
+// require("../img/col2-img1.jpg");
+// require("../img/col2-img2.jpg");
+// require("../img/col2-img3.jpg");
 
-__webpack_require__(10);
-__webpack_require__(11);
+// require("../img/fcc-cert.jpg");
 
-__webpack_require__(12);
-__webpack_require__(13);
-__webpack_require__(14);
-__webpack_require__(15);
+// require("../img/col4-img1.jpg");
+// require("../img/col4-img2.jpg");
 
-__webpack_require__(17);
+// require("../img/col5-img1.jpg");
+// require("../img/col5-img2.jpg");
+// require("../img/col5-img3.jpg");
+// require("../img/col5-img4.jpg");
+
+// require("../img/leftbar-me.jpg");
 
 /***/ })
 /******/ ]);
