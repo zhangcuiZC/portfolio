@@ -4,9 +4,11 @@
 	<title>slideshow</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/weatherModule.css">
 	<script type="text/javascript" src="../js/jquery.js"></script>
 	<script src="https://use.fontawesome.com/8ae039c8aa.js" async></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/weatherModule.js"></script>
 </head>
 <body>
 	<h3>一、随机获取名人名言</h3>
@@ -27,45 +29,7 @@
 		</div>
 	</div>
 	<h3>二、天气组件</h3>
-	<div class="weather">
-		<div class="weather-box">
-			<h5 class="today"><span class="thiscity">-</span>&nbsp;&nbsp;星期<span class="day"></span>&nbsp;&nbsp;<span class="year"></span>年<span class="month"></span>月<span class="date"></span>日
-			<span class="choosecity">选择城市：<input type="text" name="city" class="city" value="北京" maxlength="6"></span>
-			<span class="update">更新</span></h5>
-			<div class="todayinfo">
-				<h1 class="temprange">~</h1>
-				<p class="type">-</p>
-				<p class="wind">-</p>
-				<p>实时空气质量：<span class="aqi">-</span></p>
-			</div>
-			<div class="todayotherinfo">
-				<p class="time">更新中……</p>
-				<p>实时：<span class="nowtemp"></span>°C</p>
-				<h5>空气指数：</h5>
-				<p class="airinfo"></p>
-				<h5>舒适指数：</h5>
-				<p class="comfinfo"></p>
-				<h5>感冒指数：</h5>
-				<p class="coldinfo"></p>
-			</div>
-			<div class="future">
-				<ul>
-					<li class="future-item1">
-						<h6 class="date">-</h6>
-						<h3 class="temprange">~</h3>
-						<p class="type">-</p>
-						<p class="wind">-</p>
-					</li>
-					<li class="future-item2">
-						<h6 class="date">-</h6>
-						<h3 class="temprange">~</h3>
-						<p class="type">-</p>
-						<p class="wind">-</p>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
+	<div class="projectweather"></div>
 	<h3>三、维基百科查询</h3>
 	<div class="wikisearch">
 		<div class="logo">
